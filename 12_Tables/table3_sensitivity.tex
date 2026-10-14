@@ -1,0 +1,14 @@
+\begin{tabular}{llrrrr}
+\toprule
+Variant & Learner & Tasks & $\le$1,024 (main) & $\le$1,024 (variant) & Median $\log_2$ ratio of $n^*$ \\
+\midrule
+Exact duplicates kept & RF & 24 & 79\% & 79\% & -0.16 \\
+Exact duplicates kept & HGB & 24 & 79\% & 79\% & +0.00 \\
+Exact duplicates kept & kNN5 & 24 & 67\% & 67\% & -0.05 \\
+UNSW-NB15 TTL features restored & RF & 8 & 100\% & 100\% & -0.98 \\
+UNSW-NB15 TTL features restored & HGB & 8 & 100\% & 100\% & -2.47 \\
+UNSW-NB15 TTL features restored & kNN5 & 8 & 100\% & 100\% & -0.96 \\
+500 trees / $k$=10 & RF & 24 & 79\% & 79\% & +0.00 \\
+500 trees / $k$=10 & kNN5 & 24 & 67\% & 54\% & +0.52 \\
+\bottomrule
+\end{tabular}

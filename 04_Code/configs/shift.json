@@ -1,0 +1,81 @@
+{
+  "_comment": "Follow-up study protocol (shift-aware sample-size forecasting). Written 2026-10-12 BEFORE any of these experiments was run. These are new follow-up hypotheses, not part of the pre-specified H1-H6 of 2026-10-06. Changes only as dated amendments.",
+  "sizes": [
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192,
+    16384
+  ],
+  "repeats": 10,
+  "learners": [
+    "LogReg",
+    "kNN1",
+    "kNN5",
+    "RF",
+    "HGB"
+  ],
+  "learners_note": "MLP omitted for computing cost (0.83 of 2.24 CPU-hours in the original main cells); the five learners cover linear, instance-based and tree-ensemble classes.",
+  "val_attack_max": 1000,
+  "val_attack_frac": 0.2,
+  "val_benign": 2500,
+  "test_attack_max": 2000,
+  "test_benign": 5000,
+  "lovo_min_target": 100,
+  "lovo_min_source": 300,
+  "pilot_max_n": 128,
+  "eps": 0.01,
+  "signal_n": 128,
+  "signal_attack": 500,
+  "signal_benign": 1000,
+  "prevalence_targets": [
+    0.05,
+    0.6
+  ],
+  "c2st_folds": 5,
+  "seed": 2026,
+  "scenarios": {
+    "id": "random split of each of the 24 tasks; pilot on a held-out source validation set, target = independent test set",
+    "temporal": "UNSW-NB15 S1->S2 (8 tasks) and CICIDS2017 first 60% -> last 40% of the day (6 tasks); same split as the original chrono analysis",
+    "lovo": "leave-one-variant-out within a family (CICIDS2017, NSL-KDD, CIC-IoT2023 sub-labels); target variant >= lovo_min_target unique flows, source >= lovo_min_source",
+    "benign": "attack split at random; source benign from one period (UNSW S1; CICIDS Monday), target benign from another (UNSW S2; the attack's day)"
+  },
+  "outcome": {
+    "target_nstar": "smallest n with mean target balanced error <= eps (log-linear interpolation); right-censored if not reached at the largest size",
+    "forecast": "saturating power law (M2) fitted to the mean SOURCE-VALIDATION curve at n <= pilot_max_n, inverted at eps",
+    "categories": [
+      "measurable: forecast and target n* both within the target size range",
+      "both_beyond: forecast beyond the range (or never) and target censored",
+      "false_assurance: forecast within range but target censored at a size >= 2 x forecast, or target n* > 2 x forecast",
+      "conservative_miss: forecast beyond range but target reached"
+    ],
+    "unsafe": "target n* > 2 x forecast, verifiable only when 2 x forecast <= largest target size (otherwise 'unverifiable')"
+  },
+  "followup_hypotheses": {
+    "F1": "Pilot forecasts that are accurate in distribution lose accuracy under temporal and variant shift (share within a factor of 2 lower for temporal and LOVO than for ID).",
+    "F2": "Under shift, forecast failures are predominantly unsafe under-estimates (false assurance) rather than over-estimates.",
+    "F3": "Label-free shift scores computed from the pilot and unlabelled target traffic rank unsafe forecasts above safe ones (AUROC > 0.5), and abstaining on high scores lowers the unsafe rate relative to no abstention at equal coverage to random abstention.",
+    "F4": "An abstention threshold chosen on three benchmarks transfers to the fourth (leave-one-dataset-out).",
+    "F5": "Under a pure change of attack prevalence, the label-shift-adjusted classifier two-sample test keeps its score near chance while the unadjusted test does not.",
+    "F6": "Exploratory: residual errors above 1% in four CIC-IoT2023 families persist with twice the data and with larger, internally tuned models, and are concentrated in specific sub-types."
+  },
+  "statistics": "unit of analysis = forecast (scenario x learner); uncertainty by cluster bootstrap over dataset x family (2,000 resamples), sensitivity by dataset-level bootstrap; censored n* summarised with Kaplan-Meier; all F-tests reported with exact P values and labelled follow-up/exploratory.",
+  "_amendments": [
+    "2026-10-12 (after audit A6, before any follow-up result was inspected; only 3 of 99 cells had finished and none was opened): in CIC-IoT2023 the features IAT, Number and Weight take near-constant, capture-specific values for the DDoS, DoS and Mirai families (e.g. Number = 9.5, Weight = 141.55, IAT about 8.3e7) and each alone separates these families from benign traffic with balanced error <= 0.0003 (06_Experiments/audit/A6_single_feature.csv). They are treated as collection artefacts. PRIMARY follow-up analysis for CIC-IoT2023 scenarios: these three features removed (scenario ids ending '__noart'); the runs with all features are kept as a sensitivity analysis. Other datasets unchanged."
+  ],
+  "artefact_features": {
+    "ciciot": [
+      "IAT",
+      "Number",
+      "Weight"
+    ]
+  }
+}

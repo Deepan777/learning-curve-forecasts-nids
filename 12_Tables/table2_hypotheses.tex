@@ -1,0 +1,18 @@
+\begin{tabular}{llp{6.2cm}}
+\toprule
+& Pre-specified hypothesis & Result \\
+\midrule
+H1 & Saturating power law describes curves best (AICc) & 47.9\% of 144 curves [39.9--56.0] \\
+H2 & Tree ensembles reach 1\% error with $\le$1,024 flows per class & 19/24 tasks (79\%); one-sided binomial $P$=0.0033 \\
+H3a & Asymptote within nearest-neighbour Bayes-error interval & 5/24 tasks [9--40\%] \\
+H3b & Asymptote increases with class overlap (all tasks) & $\rho$=0.24 [-0.31, 0.65], $P$=0.25 \\
+ & Overlap in tasks with floor $>$1\% vs the rest & median 19.1\% ($n$=4) vs 0.13\% ($n$=20); Mann--Whitney $P$=0.0022 \\
+H4a & Exponent decreases with intrinsic dimension & $\rho$=-0.16 [-0.55, 0.36], Holm $P$=0.89 \\
+H4b & $n^*$ increases with intrinsic dimension & $\rho$=0.09 [-0.40, 0.53], Holm $P$=0.89 \\
+H5 & Past$\to$future error exceeds random split (random forest) & median 0.21\% vs 0.16\%; worse in 9/14; Holm $P$=0.068 \\
+ & Past$\to$future error exceeds random split (gradient boosting) & median 0.28\% vs 0.15\%; worse in 10/14; Holm $P$=0.041 \\
+H6 & Forecast of $n^*$ from $n\le128$ within factor 2 (saturating power law) & 91.0\% of 144 [85.2--94.6]; curves reaching 1\%: 88.9\% of 108 \\
+ & Forecast of $n^*$ from $n\le128$ within factor 2 (pure power law) & 91.7\% of 144 [86.0--95.2]; curves reaching 1\%: 91.7\% of 108 \\
+ & Forecast of $n^*$ from $n\le128$ within factor 2 (intrinsic dimension only) & 29.9\% of 144 [23.0--37.8]; curves reaching 1\%: 35.2\% of 108 \\
+\bottomrule
+\end{tabular}

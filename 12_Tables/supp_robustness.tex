@@ -1,0 +1,14 @@
+\begin{tabular}{lrrrrrrrr}
+\toprule
+ & \multicolumn{2}{c}{In-distribution} & \multicolumn{2}{c}{Temporal} & \multicolumn{2}{c}{Benign change} & \multicolumn{2}{c}{Held-out variant} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+Setting & within (\%) & unsafe (\%) & within (\%) & unsafe (\%) & within (\%) & unsafe (\%) & within (\%) & unsafe (\%) \\
+\midrule
+primary: 1\%, $n\le128$, $\times2$ & 89.4 & 1.2 & 81.0 & 42.6 & 91.8 & 5.0 & 28.3 & 75.4 \\
+target 5\% & 92.9 & 6.1 & 84.5 & 30.0 & 98.6 & 1.4 & 59.4 & 65.7 \\
+pilot $n\le64$ & 81.6 & 2.7 & 84.6 & 35.6 & 77.6 & 7.1 & 24.5 & 74.8 \\
+pilot $n\le256$ & 94.2 & 1.2 & 81.4 & 44.8 & 93.7 & 4.8 & 26.2 & 74.8 \\
+tolerance $\times1.5$ & 82.4 & 1.2 & 54.8 & 57.4 & 82.0 & 6.7 & 18.3 & 75.9 \\
+tolerance $\times3$ & 92.9 & 1.2 & 95.2 & 31.9 & 98.4 & 1.7 & 41.7 & 72.9 \\
+\bottomrule
+\end{tabular}

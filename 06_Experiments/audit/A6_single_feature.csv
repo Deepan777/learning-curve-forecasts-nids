@@ -1,0 +1,25 @@
+dataset,family,best_feature,best_be,second_feature,second_be,n_features_be_lt_1pct
+unsw,Analysis,dload,0.02398407224958954,dintpkt,0.04364072249589496,0
+unsw,Backdoor,dload,0.033338297872340494,dmeansz,0.04597659574468077,0
+unsw,DoS,dload,0.0829338993329291,dintpkt,0.1017603395997575,0
+unsw,Exploits,tcprtt,0.04135000000000005,ackdat,0.04139999999999994,0
+unsw,Fuzzers,dload,0.021199999999999997,dintpkt,0.07499999999999996,0
+unsw,Generic,dload,0.06279999999999997,dmeansz,0.07650000000000001,0
+unsw,Reconnaissance,dmeansz,0.004599999999999993,dload,0.017299999999999982,1
+unsw,Shellcode,dmeansz,9.999999999998899e-05,dload,0.01419999999999999,1
+cicids,Botnet,Avg Bwd Segment Size,0.05875616438356157,Bwd Packet Length Mean,0.05875616438356157,0
+cicids,BruteForce,Destination Port,0.0024999999999999467,Fwd Packet Length Max,0.07244999999999996,1
+cicids,DDoS,Avg Fwd Segment Size,0.04510000000000003,Fwd Packet Length Mean,0.04510000000000003,0
+cicids,DoS,Destination Port,0.0514,Init_Win_bytes_backward,0.10405000000000003,0
+cicids,PortScan,Packet Length Mean,0.012299999999999978,Packet Length Std,0.012700000000000045,0
+cicids,WebAttack,Destination Port,0.05069999999999997,Fwd IAT Min,0.056786604361370674,0
+ciciot,BruteForce,Header_Length,0.19160582959641265,rst_count,0.24029147982062782,0
+ciciot,DDoS,IAT,0.00024999999999997247,Number,0.00024999999999997247,4
+ciciot,DoS,IAT,0.0,Number,0.0,3
+ciciot,Mirai,IAT,0.00024999999999997247,Number,0.00034999999999996145,4
+ciciot,Recon,Header_Length,0.21225,IAT,0.21324999999999994,0
+ciciot,Spoofing,IAT,0.25140000000000007,urg_count,0.2747,0
+ciciot,Web,rst_count,0.22238433734939755,Header_Length,0.2356987951807229,0
+nslkdd,DoS,diff_srv_rate,0.06549999999999995,same_srv_rate,0.07349999999999995,0
+nslkdd,Probe,src_bytes,0.043849999999999945,dst_bytes,0.08800000000000002,0
+nslkdd,R2L,service,0.07092281879194628,dst_host_srv_count,0.15113489932885904,0

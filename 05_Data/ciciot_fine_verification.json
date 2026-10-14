@@ -1,0 +1,184 @@
+{
+ "rows_fine_cache": 229362,
+ "features_identical_to_original": true,
+ "families_identical_to_original": true,
+ "lowfloor_rows": {
+  "Benign": 129538,
+  "Spoofing": 57530,
+  "Recon": 41617,
+  "Web": 2821,
+  "BruteForce": 1541
+ },
+ "fine_label_counts": [
+  {
+   "family": "Benign",
+   "fine": "BenignTraffic",
+   "n": 100000
+  },
+  {
+   "family": "BruteForce",
+   "fine": "DictionaryBruteForce",
+   "n": 1541
+  },
+  {
+   "family": "DDoS",
+   "fine": "DDoS-ACK_Fragmentation",
+   "n": 234
+  },
+  {
+   "family": "DDoS",
+   "fine": "DDoS-HTTP_Flood",
+   "n": 28
+  },
+  {
+   "family": "DDoS",
+   "fine": "DDoS-ICMP_Flood",
+   "n": 5292
+  },
+  {
+   "family": "DDoS",
+   "fine": "DDoS-ICMP_Fragmentation",
+   "n": 337
+  },
+  {
+   "family": "DDoS",
+   "fine": "DDoS-PSHACK_Flood",
+   "n": 3069
+  },
+  {
+   "family": "DDoS",
+   "fine": "DDoS-RSTFINFlood",
+   "n": 2965
+  },
+  {
+   "family": "DDoS",
+   "fine": "DDoS-SYN_Flood",
+   "n": 3019
+  },
+  {
+   "family": "DDoS",
+   "fine": "DDoS-SlowLoris",
+   "n": 22
+  },
+  {
+   "family": "DDoS",
+   "fine": "DDoS-SynonymousIP_Flood",
+   "n": 2632
+  },
+  {
+   "family": "DDoS",
+   "fine": "DDoS-TCP_Flood",
+   "n": 3262
+  },
+  {
+   "family": "DDoS",
+   "fine": "DDoS-UDP_Flood",
+   "n": 3915
+  },
+  {
+   "family": "DDoS",
+   "fine": "DDoS-UDP_Fragmentation",
+   "n": 225
+  },
+  {
+   "family": "DoS",
+   "fine": "DoS-HTTP_Flood",
+   "n": 233
+  },
+  {
+   "family": "DoS",
+   "fine": "DoS-SYN_Flood",
+   "n": 6271
+  },
+  {
+   "family": "DoS",
+   "fine": "DoS-TCP_Flood",
+   "n": 8151
+  },
+  {
+   "family": "DoS",
+   "fine": "DoS-UDP_Flood",
+   "n": 10345
+  },
+  {
+   "family": "Mirai",
+   "fine": "Mirai-greeth_flood",
+   "n": 9388
+  },
+  {
+   "family": "Mirai",
+   "fine": "Mirai-greip_flood",
+   "n": 7220
+  },
+  {
+   "family": "Mirai",
+   "fine": "Mirai-udpplain",
+   "n": 8392
+  },
+  {
+   "family": "Recon",
+   "fine": "Recon-HostDiscovery",
+   "n": 9417
+  },
+  {
+   "family": "Recon",
+   "fine": "Recon-OSScan",
+   "n": 7012
+  },
+  {
+   "family": "Recon",
+   "fine": "Recon-PingSweep",
+   "n": 141
+  },
+  {
+   "family": "Recon",
+   "fine": "Recon-PortScan",
+   "n": 5848
+  },
+  {
+   "family": "Recon",
+   "fine": "VulnerabilityScan",
+   "n": 2582
+  },
+  {
+   "family": "Spoofing",
+   "fine": "DNS_Spoofing",
+   "n": 9223
+  },
+  {
+   "family": "Spoofing",
+   "fine": "MITM-ArpSpoofing",
+   "n": 15777
+  },
+  {
+   "family": "Web",
+   "fine": "Backdoor_Malware",
+   "n": 392
+  },
+  {
+   "family": "Web",
+   "fine": "BrowserHijacking",
+   "n": 665
+  },
+  {
+   "family": "Web",
+   "fine": "CommandInjection",
+   "n": 620
+  },
+  {
+   "family": "Web",
+   "fine": "SqlInjection",
+   "n": 590
+  },
+  {
+   "family": "Web",
+   "fine": "Uploading_Attack",
+   "n": 140
+  },
+  {
+   "family": "Web",
+   "fine": "XSS",
+   "n": 414
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+% =================================================================================================================
+% Figure 1 -- Framework for pilot-based labelling forecasts and their retrospective validation (editable TikZ source)
+% Boxed (module) version, 14 Oct 2026. Final size 180 mm wide; text 7.5 pt DejaVu Sans; strokes >= 1 pt.
+% Requires fig1_pics.tex (icons, colours). Compile with Figure_1_Framework.tex (standalone).
+%   charcoal modules : labelled source data and the forecast (available when the forecast is made)
+%   teal modules     : unlabelled target traffic and the reliability score (available when the forecast is made)
+%   terracotta modules and dashed arrows: target labels -- used only for retrospective validation and, in the
+%                      experiment, to fix the attack share of the unlabelled target sample (experimental control)
+% =================================================================================================================
+\begin{tikzpicture}
+\input{fig1_pics.tex}
+\tikzset{
+  module/.style={rectangle, rounded corners=2.4pt, line width=1pt, minimum width=2.80cm, minimum height=2.05cm,
+                 inner sep=0pt},
+  modS/.style={module, draw=fInk, fill=fInk!4},
+  modT/.style={module, draw=fAcc, fill=fAccL!45},
+  modE/.style={module, draw=fEval, fill=fEvalL!40},
+  modD/.style={module, draw=fInk, fill=white},
+  modO/.style={module, draw=fInk, fill=white, minimum width=2.75cm, minimum height=0.86cm},
+  panel/.style={rounded corners=3.5pt, line width=1pt},
+  tab/.style={rounded corners=1.6pt, font=\ftxt\bfseries, text=white, inner xsep=5pt, inner ysep=2.4pt, anchor=west},
+  mlab/.style={font=\ftxt, align=center, text=fInk, inner sep=0.5pt, anchor=north, text width=2.70cm,
+              execute at begin node={\hyphenpenalty=10000\exhyphenpenalty=10000}},
+}
+\def\cA{1.95}\def\cB{5.40}\def\cC{8.85}\def\cD{12.30}\def\cE{15.95}
+\def\rS{0}\def\rT{-2.90}\def\rM{-1.45}\def\rE{-6.45}\def\rBus{-4.56}
+\def\iy{0.34}\def\ly{-0.30}
+\useasboundingbox (0.00,1.80) rectangle (18.00,-7.82);
+% ------------------------------------------------------------------ panels (drawn first, behind the modules)
+\draw[panel,draw=fGrey] (0.35,1.50) rectangle (17.65,-4.18);
+\node[tab,fill=fInk] at (0.60,1.50) {At forecast time};
+\draw[panel,draw=fEval,dash pattern=on 3.2pt off 2pt] (0.35,-4.95) rectangle (17.65,-7.72);
+\node[tab,fill=fEval] at (0.60,-4.95) {Retrospective validation (target labels)};
+% ------------------------------------------------------------------ labelled source chain (contribution I)
+\node[modS] (S1) at (\cA,\rS) {};  \pic at (\cA,\rS+\iy) {records=fInk};
+\node[mlab] at (\cA,\rS+\ly) {Source flows\\[-1.5pt]{\fsml\color{fGrey}labelled}};
+\node[modS] (S2) at (\cB,\rS) {};  \pic at (\cB,\rS+\iy) {pilot};
+\node[mlab] at (\cB,\rS+\ly) {Pilot learning curve};
+\node[modS] (S3) at (\cC,\rS) {};  \pic at (\cC,\rS+\iy) {forecast};
+\node[mlab] at (\cC,\rS+\ly) {Label forecast};
+\draw[flow] (S1.east) -- (S2.west);
+\draw[flow] (S2.east) -- (S3.west);
+% ------------------------------------------------------------------ unlabelled target chain (contribution III)
+\node[modT] (T1) at (\cA,\rT) {};  \pic at (\cA,\rT+\iy) {urecords};
+\node[mlab] at (\cA,\rT+\ly) {Target traffic\\[-1.5pt]{\fsml\color{fGrey}unlabelled}};
+\node[modT] (T2) at (\cB,\rT) {};  \pic at (\cB,\rT+\iy) {shift};
+\node[mlab] at (\cB,\rT+\ly) {Shift assessment};
+\node[modT] (T3) at (\cC,\rT) {};  \pic at (\cC,\rT+\iy) {score};
+\node[mlab] at (\cC,\rT+\ly) {Reliability score};
+\draw[tflow] (T1.east) -- (T2.west);
+\draw[tflow] (T2.east) -- (T3.west);
+% ------------------------------------------------------------------ selective forecast and its two outcomes
+\node[modD] (D) at (\cD,\rM) {};
+\node[diamond,draw=fInk,fill=fInk!4,line width=1pt,minimum width=1.30cm,minimum height=0.80cm,inner sep=0pt,
+      font=\fontsize{7}{7}\selectfont] at (\cD,\rM+0.48) {$s\le\tau$};
+\node[mlab] at (\cD,\rM-0.04) {Selective forecast\\[-1.5pt]{\fsml\color{fGrey}$\tau$ fixed on\\[-1.5pt]other benchmarks}};
+\draw[flow] (S3.east) -| (D.north);
+\draw[tflow] (T3.east) -| (D.south);
+\coordinate (fork) at ($(D.east)+(0.40,0)$);
+\node[modO] (ACC) at (\cE,\rM+0.56) {};  \pic at (\cE-1.00,\rM+0.56) {accept};
+\node[font=\ftxt,anchor=west,align=left,text=fInk,inner sep=0pt] at (\cE-0.72,\rM+0.56) {Accept\\[-1.5pt]{\fsml\color{fGrey}forecast used}};
+\node[modO] (ABS) at (\cE,\rM-0.56) {};  \pic at (\cE-1.00,\rM-0.56) {abstain};
+\node[font=\ftxt,anchor=west,align=left,text=fInk,inner sep=0pt] at (\cE-0.72,\rM-0.56) {Abstain\\[-1.5pt]{\fsml\color{fGrey}forecast withheld}};
+\draw[lw,fInk] (D.east) -- (fork);
+\draw[flow] (fork) |- (ACC.west);
+\draw[flow] (fork) |- (ABS.west);
+% ------------------------------------------------------------------ retrospective validation (contribution II)
+\node[modE] (E1) at (\cA,\rE) {};  \pic at (\cA,\rE+\iy) {records=fEval};
+\node[mlab] at (\cA,\rE+\ly) {Target labels\\[-1.5pt]{\fsml\color{fGrey}evaluation only}};
+\node[modE] (E2) at (\cB,\rE) {};  \pic at (\cB,\rE+\iy) {realised};
+\node[mlab] at (\cB,\rE+\ly) {Realised requirement};
+\node[modE] (E3) at (\cC,\rE) {};  \pic at (\cC,\rE+\iy) {safety};
+\node[mlab] at (\cC,\rE+\ly) {Forecast safety};
+\node[modE] (E4) at (\cD,\rE) {};  \pic at (\cD,\rE+\iy) {riskcov};
+\node[mlab] at (\cD,\rE+\ly) {Risk--coverage};
+\node[modE] (E5) at (\cE,\rE) {};  \pic at (\cE,\rE+\iy) {transfer};
+\node[mlab] at (\cE,\rE+\ly) {Cross-benchmark transfer};
+\draw[eflow] (E1.east) -- (E2.west);
+\draw[eflow] (E2.east) -- (E3.west);
+\draw[eflow] (E3.east) -- (E4.west);
+\draw[eflow] (E4.east) -- (E5.west);
+% every forecast, with its score and decision, is passed to validation
+\draw[eflow,-] ($(fork)+(0,-0.56)$) -- (fork |- 0,\rBus) coordinate (bus);
+\fill[fEval] (bus) circle (0.055);
+\draw[eflow] (bus) -| (E4.north);
+\draw[eflow] (bus) -| (E3.north);
+% experimental control: in the experiment, target labels fix the attack share of the unlabelled target sample
+\draw[eflow] (E1.west) -- (0.15,\rE) |- (T1.west);
+\node[sub,text=fEval,anchor=west,align=left] at (0.50,\rBus) {attack share matched (experimental control)};
+% ------------------------------------------------------------------ contribution indicators
+\node[cnum,fill=white] at (\cC+1.08,\rS+0.74) {I};
+\node[cnum,fill=white] at (\cC+1.08,\rE+0.74) {II};
+\node[cnum,fill=white] at (\cC+1.08,\rT+0.74) {III};
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\begin{tabular}{lrr}
+\toprule
+Category (saturating power law, $n\le128$) & Forecasts & Counted correct \\
+\midrule
+forecast and observation within the data & 104 & 96 \\
+both beyond the data & 35 & 35 \\
+observed, forecast beyond the data & 4 & 0 \\
+forecast within the data, never observed & 1 & 0 \\
+\midrule
+Learner & \multicolumn{2}{r}{Kaplan--Meier median $n^*(1\%)$ [quartiles]; reached} \\
+\midrule
+HGB & \multicolumn{2}{r}{148 [75--408]; 19/24} \\
+LogReg & \multicolumn{2}{r}{156 [60--not reached]; 16/24} \\
+MLP & \multicolumn{2}{r}{159 [62--712]; 18/24} \\
+RF & \multicolumn{2}{r}{85 [44--660]; 19/24} \\
+1-NN & \multicolumn{2}{r}{220 [70--887]; 18/24} \\
+5-NN & \multicolumn{2}{r}{437 [92--1,739]; 18/24} \\
+\bottomrule
+\end{tabular}

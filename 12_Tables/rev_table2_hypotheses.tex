@@ -1,0 +1,20 @@
+\begin{tabular}{p{0.75cm}>{\raggedright}p{4.3cm}>{\raggedright}p{6.15cm}>{\raggedright\arraybackslash}p{2.5cm}}
+\toprule
+& Hypothesis & Result & Verdict \\
+\midrule
+H1 & Saturating power law fits best & 48\% of 144 curves (40\%--56\%) & not supported \\
+H2 & Trees reach 1\% with $\le$1,024 flows per class in most tasks & 19/24 tasks; $P$=0.0033; dependence-aware 46\%--100\% & supported \\
+H3a & Floors within nearest-neighbour Bayes interval & 5/24 tasks & not supported \\
+H3b & Floors increase with class overlap & $\rho$=0.24, $P$=0.25 & not supported \\
+H4 & Learning slows with intrinsic dimension & $\rho$=$-$0.16 (exponent), 0.09 ($n^*$); Holm $P$=0.89 & not supported \\
+H5 & Earlier-to-later split raises error & gradient boosting 10/14 (Holm $P$=0.041); random forest 9/14 ($P$=0.068) & partly \\
+H6 & Pilot forecasts within a factor of 2 & 92.3\% of 104 measurable (shared test set) & supported, optimistic \\
+\midrule \multicolumn{4}{l}{\textit{Follow-up study (specified before it was run; not pre-specified with H1--H6)}} \\ \midrule
+F1 & Accuracy falls under temporal and variant shift & in-distr. 89.4\%; temporal 81.0\% ($P$=0.18); variant 28.3\% ($P\le0.001$); benign 91.8\% & variant only \\
+F2 & Failures under shift are mostly under-estimates & temporal 24/27; variant 110/137 & supported \\
+F3 & Label-free scores rank unsafe forecasts & AUROC 0.57 (no target data) to 0.89 (KS share) & supported \\
+F4 & Abstention thresholds transfer across benchmarks & KS 8.9\% unsafe at 33\% coverage; adj.\ C2ST 9.9\% at 27\% & partly \\
+F5 & Adjusted C2ST insensitive to prevalence change & median 0.50 vs 0.63 unadjusted; $P$=$1.2\times10^{-7}$ & supported \\
+F6 & Residual errors persist with more data and tuning (exploratory) & 5.7\%--5.9\% at 32,768 flows; tuned 4.3\%--6.3\% & supported \\
+\bottomrule
+\end{tabular}

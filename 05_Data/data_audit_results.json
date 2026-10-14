@@ -1,0 +1,416 @@
+{
+ "nslkdd": {
+  "name": "NSL-KDD",
+  "rows": 125973,
+  "features": 41,
+  "nonfinite_values": 0,
+  "constant_features": 1,
+  "benign_rows": 67343,
+  "attack_rows": 58630,
+  "dup_rows_overall": 16,
+  "dup_share_overall": 0.00012701134370063372,
+  "dup_share_benign": 0.0,
+  "dup_share_attack": 0.00015350503155375783,
+  "vectors_both_labels": 7,
+  "families": {
+   "Benign": {
+    "rows": 67343,
+    "unique": 67343
+   },
+   "DoS": {
+    "rows": 45927,
+    "unique": 45927
+   },
+   "Probe": {
+    "rows": 11656,
+    "unique": 11647
+   },
+   "R2L": {
+    "rows": 995,
+    "unique": 995
+   },
+   "U2R": {
+    "rows": 52,
+    "unique": 52
+   }
+  },
+  "feature_names": [
+   "duration",
+   "protocol_type",
+   "service",
+   "flag",
+   "src_bytes",
+   "dst_bytes",
+   "land",
+   "wrong_fragment",
+   "urgent",
+   "hot",
+   "num_failed_logins",
+   "logged_in",
+   "num_compromised",
+   "root_shell",
+   "su_attempted",
+   "num_root",
+   "num_file_creations",
+   "num_shells",
+   "num_access_files",
+   "num_outbound_cmds",
+   "is_host_login",
+   "is_guest_login",
+   "count",
+   "srv_count",
+   "serror_rate",
+   "srv_serror_rate",
+   "rerror_rate",
+   "srv_rerror_rate",
+   "same_srv_rate",
+   "diff_srv_rate",
+   "srv_diff_host_rate",
+   "dst_host_count",
+   "dst_host_srv_count",
+   "dst_host_same_srv_rate",
+   "dst_host_diff_srv_rate",
+   "dst_host_same_src_port_rate",
+   "dst_host_srv_diff_host_rate",
+   "dst_host_serror_rate",
+   "dst_host_srv_serror_rate",
+   "dst_host_rerror_rate",
+   "dst_host_srv_rerror_rate"
+  ]
+ },
+ "unsw": {
+  "name": "UNSW-NB15",
+  "rows": 2263592,
+  "features": 38,
+  "nonfinite_values": 0,
+  "constant_features": 0,
+  "benign_rows": 1942309,
+  "attack_rows": 321283,
+  "dup_rows_overall": 304089,
+  "dup_share_overall": 0.13433913885541215,
+  "dup_share_benign": 0.03144813724283824,
+  "dup_share_attack": 0.7563643267773271,
+  "vectors_both_labels": 0,
+  "families": {
+   "Analysis": {
+    "rows": 2677,
+    "unique": 2032
+   },
+   "Backdoor": {
+    "rows": 2329,
+    "unique": 1880
+   },
+   "Benign": {
+    "rows": 1942309,
+    "unique": 1881227
+   },
+   "DoS": {
+    "rows": 16353,
+    "unique": 5498
+   },
+   "Exploits": {
+    "rows": 44525,
+    "unique": 27434
+   },
+   "Fuzzers": {
+    "rows": 24246,
+    "unique": 20960
+   },
+   "Generic": {
+    "rows": 215481,
+    "unique": 18830
+   },
+   "Reconnaissance": {
+    "rows": 13987,
+    "unique": 9991
+   },
+   "Shellcode": {
+    "rows": 1511,
+    "unique": 1456
+   },
+   "Worms": {
+    "rows": 174,
+    "unique": 171
+   }
+  },
+  "feature_names": [
+   "proto",
+   "state",
+   "dur",
+   "sbytes",
+   "dbytes",
+   "sloss",
+   "dloss",
+   "service",
+   "sload",
+   "dload",
+   "spkts",
+   "dpkts",
+   "swin",
+   "dwin",
+   "stcpb",
+   "dtcpb",
+   "smeansz",
+   "dmeansz",
+   "trans_depth",
+   "res_bdy_len",
+   "sjit",
+   "djit",
+   "sintpkt",
+   "dintpkt",
+   "tcprtt",
+   "synack",
+   "ackdat",
+   "is_sm_ips_ports",
+   "ct_flw_http_mthd",
+   "is_ftp_login",
+   "ct_ftp_cmd",
+   "ct_srv_src",
+   "ct_srv_dst",
+   "ct_dst_ltm",
+   "ct_src_ltm",
+   "ct_src_dport_ltm",
+   "ct_dst_sport_ltm",
+   "ct_dst_src_ltm"
+  ],
+  "periods": {
+   "S1": 1063262,
+   "S2": 1200330
+  },
+  "hosts": 20,
+  "raw_rows": 2540047,
+  "rows_to_protected_hosts": 2303941,
+  "benign_from_attacker_subnet_removed": 40349,
+  "ttl_only_depth2_balanced_error": 0.0
+ },
+ "cicids": {
+  "name": "CICIDS2017",
+  "rows": 588653,
+  "features": 70,
+  "nonfinite_values": 0,
+  "constant_features": 0,
+  "benign_rows": 454140,
+  "attack_rows": 134513,
+  "dup_rows_overall": 42568,
+  "dup_share_overall": 0.0723142496513226,
+  "dup_share_benign": 0.04719469767032192,
+  "dup_share_attack": 0.15671347750775022,
+  "vectors_both_labels": 55,
+  "families": {
+   "Benign": {
+    "rows": 454140,
+    "unique": 432707
+   },
+   "Botnet": {
+    "rows": 1956,
+    "unique": 1948
+   },
+   "BruteForce": {
+    "rows": 13832,
+    "unique": 9150
+   },
+   "DDoS": {
+    "rows": 25502,
+    "unique": 25501
+   },
+   "DoS": {
+    "rows": 59384,
+    "unique": 47909
+   },
+   "Heartbleed": {
+    "rows": 11,
+    "unique": 11
+   },
+   "Infiltration": {
+    "rows": 36,
+    "unique": 36
+   },
+   "PortScan": {
+    "rows": 31612,
+    "unique": 26735
+   },
+   "WebAttack": {
+    "rows": 2180,
+    "unique": 2143
+   }
+  },
+  "feature_names": [
+   "Destination Port",
+   "Flow Duration",
+   "Total Fwd Packets",
+   "Total Backward Packets",
+   "Total Length of Fwd Packets",
+   "Total Length of Bwd Packets",
+   "Fwd Packet Length Max",
+   "Fwd Packet Length Min",
+   "Fwd Packet Length Mean",
+   "Fwd Packet Length Std",
+   "Bwd Packet Length Max",
+   "Bwd Packet Length Min",
+   "Bwd Packet Length Mean",
+   "Bwd Packet Length Std",
+   "Flow Bytes/s",
+   "Flow Packets/s",
+   "Flow IAT Mean",
+   "Flow IAT Std",
+   "Flow IAT Max",
+   "Flow IAT Min",
+   "Fwd IAT Total",
+   "Fwd IAT Mean",
+   "Fwd IAT Std",
+   "Fwd IAT Max",
+   "Fwd IAT Min",
+   "Bwd IAT Total",
+   "Bwd IAT Mean",
+   "Bwd IAT Std",
+   "Bwd IAT Max",
+   "Bwd IAT Min",
+   "Fwd PSH Flags",
+   "Fwd URG Flags",
+   "Fwd Header Length",
+   "Bwd Header Length",
+   "Fwd Packets/s",
+   "Bwd Packets/s",
+   "Min Packet Length",
+   "Max Packet Length",
+   "Packet Length Mean",
+   "Packet Length Std",
+   "Packet Length Variance",
+   "FIN Flag Count",
+   "SYN Flag Count",
+   "RST Flag Count",
+   "PSH Flag Count",
+   "ACK Flag Count",
+   "URG Flag Count",
+   "CWE Flag Count",
+   "ECE Flag Count",
+   "Down/Up Ratio",
+   "Average Packet Size",
+   "Avg Fwd Segment Size",
+   "Avg Bwd Segment Size",
+   "Fwd Header Length.1",
+   "Subflow Fwd Packets",
+   "Subflow Fwd Bytes",
+   "Subflow Bwd Packets",
+   "Subflow Bwd Bytes",
+   "Init_Win_bytes_forward",
+   "Init_Win_bytes_backward",
+   "act_data_pkt_fwd",
+   "min_seg_size_forward",
+   "Active Mean",
+   "Active Std",
+   "Active Max",
+   "Active Min",
+   "Idle Mean",
+   "Idle Std",
+   "Idle Max",
+   "Idle Min"
+  ],
+  "days": {
+   "Fri-AM": 40091,
+   "Fri-PM1": 56785,
+   "Fri-PM2": 44991,
+   "Mon": 106087,
+   "Thu-AM": 35727,
+   "Thu-PM": 57624,
+   "Tue": 100012,
+   "Wed": 147336
+  }
+ },
+ "ciciot": {
+  "name": "CIC-IoT2023",
+  "rows": 229362,
+  "features": 46,
+  "nonfinite_values": 0,
+  "constant_features": 5,
+  "benign_rows": 100000,
+  "attack_rows": 129362,
+  "dup_rows_overall": 3542,
+  "dup_share_overall": 0.015442837087224603,
+  "dup_share_benign": 0.01900999999999997,
+  "dup_share_attack": 0.012685332632457746,
+  "vectors_both_labels": 0,
+  "families": {
+   "Benign": {
+    "rows": 100000,
+    "unique": 98099
+   },
+   "BruteForce": {
+    "rows": 1541,
+    "unique": 1488
+   },
+   "DDoS": {
+    "rows": 25000,
+    "unique": 24719
+   },
+   "DoS": {
+    "rows": 25000,
+    "unique": 24872
+   },
+   "Mirai": {
+    "rows": 25000,
+    "unique": 24505
+   },
+   "Recon": {
+    "rows": 25000,
+    "unique": 24615
+   },
+   "Spoofing": {
+    "rows": 25000,
+    "unique": 24754
+   },
+   "Web": {
+    "rows": 2821,
+    "unique": 2768
+   }
+  },
+  "feature_names": [
+   "flow_duration",
+   "Header_Length",
+   "Protocol Type",
+   "Duration",
+   "Rate",
+   "Srate",
+   "Drate",
+   "fin_flag_number",
+   "syn_flag_number",
+   "rst_flag_number",
+   "psh_flag_number",
+   "ack_flag_number",
+   "ece_flag_number",
+   "cwr_flag_number",
+   "ack_count",
+   "syn_count",
+   "fin_count",
+   "urg_count",
+   "rst_count",
+   "HTTP",
+   "HTTPS",
+   "DNS",
+   "Telnet",
+   "SMTP",
+   "SSH",
+   "IRC",
+   "TCP",
+   "UDP",
+   "DHCP",
+   "ARP",
+   "ICMP",
+   "IPv",
+   "LLC",
+   "Tot sum",
+   "Min",
+   "Max",
+   "AVG",
+   "Std",
+   "Tot size",
+   "IAT",
+   "Number",
+   "Magnitue",
+   "Radius",
+   "Covariance",
+   "Variance",
+   "Weight"
+  ]
+ }
+}

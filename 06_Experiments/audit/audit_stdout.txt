@@ -1,0 +1,201 @@
+{
+ "A1": {
+  "categories": [
+   {
+    "category": "both_beyond_data",
+    "n": 35,
+    "correct": 35
+   },
+   {
+    "category": "measurable",
+    "n": 104,
+    "correct": 96
+   },
+   {
+    "category": "observed_censored_forecast_finite",
+    "n": 1,
+    "correct": 0
+   },
+   {
+    "category": "observed_finite_forecast_beyond",
+    "n": 4,
+    "correct": 0
+   }
+  ],
+  "measurable_share_within2": 0.9230769230769231,
+  "measurable_n": 104,
+  "measurable_median_abs_log2_error": 0.1607483015680095
+ },
+ "A2": {
+  "max_share_dist_lt_1e3": 0.1725,
+  "tasks_with_share_gt_5pct": [
+   {
+    "dataset": "cicids",
+    "family": "Botnet",
+    "cls": "attack",
+    "share_dist_lt_1e3": 0.1541095890410959
+   },
+   {
+    "dataset": "cicids",
+    "family": "DoS",
+    "cls": "attack",
+    "share_dist_lt_1e3": 0.103
+   },
+   {
+    "dataset": "cicids",
+    "family": "PortScan",
+    "cls": "attack",
+    "share_dist_lt_1e3": 0.0955
+   },
+   {
+    "dataset": "ciciot",
+    "family": "DDoS",
+    "cls": "attack",
+    "share_dist_lt_1e3": 0.1725
+   },
+   {
+    "dataset": "ciciot",
+    "family": "DoS",
+    "cls": "attack",
+    "share_dist_lt_1e3": 0.1585
+   },
+   {
+    "dataset": "ciciot",
+    "family": "Mirai",
+    "cls": "attack",
+    "share_dist_lt_1e3": 0.092
+   }
+  ]
+ },
+ "A3": [
+  {
+   "learner": "HGB",
+   "km_median": 147.70277369857996,
+   "km_q25": 75.27908644832239,
+   "km_q75": 407.7250263774869,
+   "reached": 19,
+   "n": 24
+  },
+  {
+   "learner": "LogReg",
+   "km_median": 156.36241912393092,
+   "km_q25": 60.45847252943086,
+   "km_q75": Infinity,
+   "reached": 16,
+   "n": 24
+  },
+  {
+   "learner": "MLP",
+   "km_median": 159.16295406337557,
+   "km_q25": 62.04834724606607,
+   "km_q75": 712.0924172328746,
+   "reached": 18,
+   "n": 24
+  },
+  {
+   "learner": "RF",
+   "km_median": 85.11104160370245,
+   "km_q25": 44.38875383812332,
+   "km_q75": 659.7971452595826,
+   "reached": 19,
+   "n": 24
+  },
+  {
+   "learner": "kNN1",
+   "km_median": 219.82983328588784,
+   "km_q25": 70.32192395284993,
+   "km_q75": 887.4305815323131,
+   "reached": 18,
+   "n": 24
+  },
+  {
+   "learner": "kNN5",
+   "km_median": 437.4151006007895,
+   "km_q25": 92.32076440674471,
+   "km_q75": 1739.1126894059332,
+   "reached": 18,
+   "n": 24
+  }
+ ],
+ "A4": {
+  "share_le_1024": 0.7916666666666666,
+  "cluster_bootstrap_95ci": [
+   0.4583333333333333,
+   1.0
+  ]
+ },
+ "A5": [
+  {
+   "family": "Botnet",
+   "order": "chrono",
+   "with_port": 0.32276,
+   "without_port": 0.32339
+  },
+  {
+   "family": "Botnet",
+   "order": "rcontrol",
+   "with_port": 0.00812,
+   "without_port": 0.01155
+  },
+  {
+   "family": "BruteForce",
+   "order": "chrono",
+   "with_port": 0.438,
+   "without_port": 0.43692
+  },
+  {
+   "family": "BruteForce",
+   "order": "rcontrol",
+   "with_port": 0.00048,
+   "without_port": 0.00162
+  },
+  {
+   "family": "DDoS",
+   "order": "chrono",
+   "with_port": 0.00102,
+   "without_port": 0.00112
+  },
+  {
+   "family": "DDoS",
+   "order": "rcontrol",
+   "with_port": 0.00097,
+   "without_port": 0.00102
+  },
+  {
+   "family": "DoS",
+   "order": "chrono",
+   "with_port": 0.03666,
+   "without_port": 0.04685
+  },
+  {
+   "family": "DoS",
+   "order": "rcontrol",
+   "with_port": 0.00204,
+   "without_port": 0.0043
+  },
+  {
+   "family": "PortScan",
+   "order": "chrono",
+   "with_port": 0.00203,
+   "without_port": 0.00211
+  },
+  {
+   "family": "PortScan",
+   "order": "rcontrol",
+   "with_port": 0.0008,
+   "without_port": 0.0008
+  },
+  {
+   "family": "WebAttack",
+   "order": "chrono",
+   "with_port": 0.01795,
+   "without_port": 0.02687
+  },
+  {
+   "family": "WebAttack",
+   "order": "rcontrol",
+   "with_port": 0.00428,
+   "without_port": 0.01148
+  }
+ ]
+}

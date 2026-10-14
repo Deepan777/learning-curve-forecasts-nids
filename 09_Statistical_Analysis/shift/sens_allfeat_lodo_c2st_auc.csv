@@ -1,0 +1,5 @@
+dataset,signal,threshold,n,accepted,unsafe_accepted,unsafe_all
+cicids,c2st_auc,0.6415277430555555,96,39,8,48
+ciciot,c2st_auc,0.6356238689628575,96,15,0,40
+nslkdd,c2st_auc,0.6602031587415287,43,12,5,33
+unsw,c2st_auc,0.6199706527238995,108,39,0,7

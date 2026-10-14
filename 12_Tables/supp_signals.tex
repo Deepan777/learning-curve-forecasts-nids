@@ -1,0 +1,14 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+Score & AUROC, all & AUROC, shifted only & AURC & Unsafe at 50\% cov. & LODO coverage & LODO unsafe \\
+\midrule
+KS share & 0.89 (0.80--0.96) & 0.83 (0.68--0.93) & 0.151 & 9.4 & 33.0 & 8.9 \\
+confidence drop & 0.86 (0.80--0.91) & 0.83 (0.76--0.90) & 0.183 & 11.2 & 25.7 & 18.4 \\
+disagreement change & 0.81 (0.72--0.88) & 0.79 (0.71--0.86) & 0.271 & 14.1 & 3.5 & 83.3 \\
+C2ST & 0.69 (0.58--0.80) & 0.49 (0.35--0.65) & 0.228 & 24.1 & 31.0 & 12.4 \\
+C2ST, label-shift adjusted & 0.60 (0.50--0.72) & 0.34 (0.22--0.52) & 0.263 & 38.2 & 26.8 & 9.9 \\
+pilot width (no target data) & 0.57 (0.51--0.64) & 0.57 (0.50--0.65) & 0.375 & 34.1 & 0.9 & 100.0 \\
+\midrule
+No abstention & 0.50 & 0.50 & 0.395 & 39.5 & 100.0 & 39.5 \\
+\bottomrule
+\end{tabular}

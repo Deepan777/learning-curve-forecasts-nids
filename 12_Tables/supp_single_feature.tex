@@ -1,0 +1,30 @@
+\begin{tabular}{llllll}
+\toprule
+Dataset & Family & Best single feature & BE (\%) & Second feature & BE (\%) \\
+\midrule
+NSL-KDD & DoS & \texttt{diff\_srv\_rate} & 6.55 & \texttt{same\_srv\_rate} & 7.35 \\
+NSL-KDD & Probe & \texttt{src\_bytes} & 4.38 & \texttt{dst\_bytes} & 8.80 \\
+NSL-KDD & R2L & \texttt{service} & 7.09 & \texttt{dst\_host\_srv\_count} & 15.11 \\
+UNSW-NB15 & Analysis & \texttt{dload} & 2.40 & \texttt{dintpkt} & 4.36 \\
+UNSW-NB15 & Backdoor & \texttt{dload} & 3.33 & \texttt{dmeansz} & 4.60 \\
+UNSW-NB15 & DoS & \texttt{dload} & 8.29 & \texttt{dintpkt} & 10.18 \\
+UNSW-NB15 & Exploits & \texttt{tcprtt} & 4.13 & \texttt{ackdat} & 4.14 \\
+UNSW-NB15 & Fuzzers & \texttt{dload} & 2.12 & \texttt{dintpkt} & 7.50 \\
+UNSW-NB15 & Generic & \texttt{dload} & 6.28 & \texttt{dmeansz} & 7.65 \\
+UNSW-NB15 & Reconnaissance & \texttt{dmeansz} & 0.46 & \texttt{dload} & 1.73 \\
+UNSW-NB15 & Shellcode & \texttt{dmeansz} & 0.01 & \texttt{dload} & 1.42 \\
+CICIDS2017 & Botnet & \texttt{Avg Bwd Segment Size} & 5.88 & \texttt{Bwd Packet Length Mean} & 5.88 \\
+CICIDS2017 & Brute force & \texttt{Destination Port} & 0.25 & \texttt{Fwd Packet Length Max} & 7.24 \\
+CICIDS2017 & DDoS & \texttt{Avg Fwd Segment Size} & 4.51 & \texttt{Fwd Packet Length Mean} & 4.51 \\
+CICIDS2017 & DoS & \texttt{Destination Port} & 5.14 & \texttt{Init\_Win\_bytes\_backward} & 10.41 \\
+CICIDS2017 & Port scan & \texttt{Packet Length Mean} & 1.23 & \texttt{Packet Length Std} & 1.27 \\
+CICIDS2017 & Web attack & \texttt{Destination Port} & 5.07 & \texttt{Fwd IAT Min} & 5.68 \\
+CIC-IoT2023 & Brute force & \texttt{Header\_Length} & 19.16 & \texttt{rst\_count} & 24.03 \\
+CIC-IoT2023 & DDoS & \texttt{IAT} & 0.02 & \texttt{Number} & 0.02 \\
+CIC-IoT2023 & DoS & \texttt{IAT} & 0.00 & \texttt{Number} & 0.00 \\
+CIC-IoT2023 & Mirai & \texttt{IAT} & 0.02 & \texttt{Number} & 0.03 \\
+CIC-IoT2023 & Reconnaissance & \texttt{Header\_Length} & 21.22 & \texttt{IAT} & 21.32 \\
+CIC-IoT2023 & Spoofing & \texttt{IAT} & 25.14 & \texttt{urg\_count} & 27.47 \\
+CIC-IoT2023 & Web & \texttt{rst\_count} & 22.24 & \texttt{Header\_Length} & 23.57 \\
+\bottomrule
+\end{tabular}

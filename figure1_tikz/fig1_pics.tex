@@ -1,0 +1,109 @@
+% ---------------------------------------------------------------------------------------------------------------
+% Figure 1 -- shared colour, line and icon definitions (TikZ/PGF). Used by fig1_framework.tikz and the layout
+% concepts in concepts/. Drawn at final size: 180 mm wide, 7.5 pt DejaVu Sans (the face of Figs 2-6), all strokes
+% >= 1 pt. Every icon is a TikZ "pic" centred on (0,0) within about 1.5 cm x 0.95 cm.
+% ---------------------------------------------------------------------------------------------------------------
+\definecolor{fInk}{HTML}{23272E}     % charcoal: structure, labelled source data, forecasting
+\definecolor{fGrey}{HTML}{7B828C}    % axes and secondary strokes
+\definecolor{fAcc}{HTML}{155B7A}     % deep teal: unlabelled target traffic and reliability assessment
+\definecolor{fAccL}{HTML}{D3E5EE}
+\definecolor{fEval}{HTML}{BC5A36}    % muted terracotta: target labels, used only for retrospective validation
+\definecolor{fEvalL}{HTML}{F2DCD2}
+\providecommand{\ftxt}{\fontsize{7.5}{8.8}\selectfont\sffamily}
+\providecommand{\fsml}{\fontsize{6.6}{7.6}\selectfont\sffamily}
+\tikzset{
+  >={Stealth[length=2.3mm,width=1.7mm]},
+  lw/.style={line width=1pt},
+  ic/.style={line width=1pt, line cap=round, line join=round},
+  flow/.style={lw, ->, fInk},
+  tflow/.style={lw, ->, fAcc},
+  eflow/.style={lw, ->, fEval, dash pattern=on 3pt off 2pt},
+  lab/.style={font=\ftxt, align=center, text=fInk, inner sep=1pt, anchor=north},
+  sub/.style={font=\fsml, align=center, text=fGrey, inner sep=0.5pt},
+  math/.style={font=\ftxt, inner sep=0.5pt},
+  cnum/.style={circle, draw=fInk, line width=1pt, minimum size=4.7mm, inner sep=0pt,
+               font=\fontsize{6.2}{6.2}\selectfont\sffamily, text=fInk},
+  % ------------------------------------------------------------------ flow records (labelled / unlabelled)
+  pics/records/.style={code={
+    \foreach \y/\f in {0.30/1,0.10/0,-0.10/1,-0.30/0}{
+      \ifnum\f=1 \filldraw[ic,draw=#1,fill=#1] (-0.66,\y-0.055) rectangle ++(0.11,0.11);
+      \else \draw[ic,draw=#1] (-0.66,\y-0.055) rectangle ++(0.11,0.11); \fi
+      \draw[ic,fInk] (-0.40,\y) -- (-0.08,\y); \draw[ic,fInk] (0.00,\y) -- (0.30,\y); \draw[ic,fInk] (0.38,\y) -- (0.62,\y);}
+  }},
+  pics/urecords/.style={code={
+    \foreach \y in {0.30,0.10,-0.10,-0.30}{
+      \draw[ic,fAcc] (-0.66,\y) -- (-0.08,\y); \draw[ic,fAcc] (0.00,\y) -- (0.30,\y); \draw[ic,fAcc] (0.38,\y) -- (0.62,\y);}
+  }},
+  % ------------------------------------------------------------------ pilot learning curve
+  pics/pilot/.style={code={
+    \draw[ic,fGrey] (-0.66,0.44) -- (-0.66,-0.40) -- (0.70,-0.40);
+    \draw[ic,fGrey,dash pattern=on 0.1pt off 2.2pt] (-0.66,-0.17) -- (0.70,-0.17);   % target error
+    \node[math,anchor=east,text=fInk] at (-0.66,-0.17) {$\varepsilon$};
+    \draw[ic,fInk,domain=-0.60:-0.18,samples=30] plot (\x,{-0.34+0.66*exp(-2.6*(\x+0.62))});
+    \draw[ic,fInk,dash pattern=on 2.2pt off 1.6pt,domain=-0.18:0.66,samples=30] plot (\x,{-0.34+0.66*exp(-2.6*(\x+0.62))});
+    \foreach \x in {-0.58,-0.46,-0.34,-0.22}{\fill[fInk] (\x,{-0.34+0.66*exp(-2.6*(\x+0.62))}) circle (0.048);}
+  }},
+  % ------------------------------------------------------------------ forecast of the label requirement
+  pics/forecast/.style={code={
+    \draw[ic,fGrey] (-0.66,-0.22) -- (0.66,-0.22);
+    \foreach \x in {-0.60,-0.30,0.00,0.30,0.60}{\draw[ic,fGrey] (\x,-0.22) -- (\x,-0.31);}
+    \fill[fInk] (0.12,-0.13) -- (0.03,0.02) -- (0.21,0.02) -- cycle;
+    \node[math,text=fInk] at (0.12,0.21) {$\hat n$};
+  }},
+  % ------------------------------------------------------------------ distribution shift: two densities
+  pics/shift/.style={code={
+    \draw[ic,fGrey] (-0.68,-0.34) -- (0.70,-0.34);
+    \draw[ic,fInk,domain=-0.68:0.40,samples=40] plot (\x,{-0.34+0.66*exp(-((\x+0.18)^2)/0.040)});
+    \draw[ic,fAcc,dash pattern=on 2.6pt off 1.6pt,domain=-0.30:0.70,samples=40]
+         plot (\x,{-0.34+0.50*exp(-((\x-0.25)^2)/0.055)});
+  }},
+  % ------------------------------------------------------------------ reliability score on a scale with threshold
+  pics/score/.style={code={
+    \draw[ic,fGrey] (-0.66,-0.12) -- (0.66,-0.12);
+    \draw[ic,fGrey] (-0.66,-0.04) -- (-0.66,-0.20); \draw[ic,fGrey] (0.66,-0.04) -- (0.66,-0.20);
+    \draw[ic,fInk,dash pattern=on 2pt off 1.4pt] (0.20,-0.32) -- (0.20,0.10);
+    \node[math,text=fInk] at (0.20,0.26) {$\tau$};
+    \fill[fAcc] (-0.24,-0.12) circle (0.085);
+    \node[math,text=fAcc] at (-0.24,0.12) {$s$};
+  }},
+  % ------------------------------------------------------------------ accept / abstain glyphs
+  pics/accept/.style={code={
+    \draw[ic,fInk] (0,0) circle (0.17);
+    \draw[ic,fInk] (-0.085,0.0) -- (-0.02,-0.07) -- (0.095,0.075);
+  }},
+  pics/abstain/.style={code={
+    \draw[ic,fInk] (0,0) circle (0.17);
+    \draw[ic,fInk] (-0.12,-0.12) -- (0.12,0.12);
+  }},
+  % ------------------------------------------------------------------ realised target learning curve
+  pics/realised/.style={code={
+    \draw[ic,fGrey] (-0.66,0.44) -- (-0.66,-0.40) -- (0.70,-0.40);
+    \draw[ic,fGrey,dash pattern=on 0.1pt off 2.2pt] (-0.66,-0.17) -- (0.70,-0.17);   % target error
+    \node[math,anchor=east,text=fInk] at (-0.66,-0.17) {$\varepsilon$};
+    \draw[ic,fEval,domain=-0.60:0.66,samples=40] plot (\x,{-0.30+0.62*exp(-1.9*(\x+0.62))});
+    \foreach \x in {-0.56,-0.32,-0.08,0.16,0.40,0.64}{\fill[fEval] (\x,{-0.30+0.62*exp(-1.9*(\x+0.62))}) circle (0.048);}
+  }},
+  % ------------------------------------------------------------------ forecast safety: n* against 2 n-hat
+  pics/safety/.style={code={
+    \draw[ic,fGrey] (-0.66,-0.18) -- (0.66,-0.18);
+    \fill[fInk!14] (-0.40,-0.26) rectangle (0.08,-0.10);
+    \draw[ic,fInk] (-0.40,-0.30) -- (-0.40,-0.06); \draw[ic,fInk] (0.08,-0.30) -- (0.08,-0.06);
+    \node[math,text=fInk] at (-0.40,0.13) {$\hat n$};
+    \node[math,text=fInk] at (0.08,0.13) {$2\hat n$};
+    \fill[fEval] (0.46,-0.14) -- (0.38,0.00) -- (0.54,0.00) -- cycle;
+    \node[math,text=fEval] at (0.47,0.19) {$n^{*}$};
+  }},
+  % ------------------------------------------------------------------ risk-coverage curve
+  pics/riskcov/.style={code={
+    \draw[ic,fGrey] (-0.66,0.44) -- (-0.66,-0.40) -- (0.70,-0.40);
+    \draw[ic,fGrey,dash pattern=on 1pt off 1.6pt] (-0.66,0.06) -- (0.70,0.06);
+    \draw[ic,fEval,domain=-0.60:0.66,samples=40] plot (\x,{-0.36+0.42*((\x+0.62)/1.28)^2.2});
+  }},
+  % ------------------------------------------------------------------ cross-benchmark transfer (leave one out)
+  pics/transfer/.style={code={
+    \foreach \x in {-0.60,-0.30,0.00}{\filldraw[ic,draw=fAcc,fill=fAccL] (\x,-0.13) rectangle ++(0.22,0.22);}
+    \draw[ic,draw=fEval] (0.42,-0.13) rectangle ++(0.22,0.22);
+    \draw[ic,fInk,->,>={Stealth[length=1.5mm,width=1.2mm]}] (0.25,-0.02) -- (0.39,-0.02);
+    \node[math,text=fInk] at (-0.27,0.27) {$\tau$};
+  }},
+}

@@ -1,0 +1,5 @@
+dataset,signal,threshold,n,accepted,unsafe_accepted,unsafe_all
+cicids,ks_share,0.2813953488372093,96,51,10,48
+ciciot,ks_share,0.2142857142857142,92,15,0,46
+nslkdd,ks_share,0.2142857142857142,43,7,0,33
+unsw,ks_share,0.00285714285714285,108,39,0,7

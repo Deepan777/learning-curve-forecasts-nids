@@ -1,0 +1,31 @@
+{
+  "_comment": "Pre-specified settings (fixed 2026-10-06 before the main experiment). Changes only as dated amendments below.",
+  "datasets": ["nslkdd", "unsw", "cicids", "ciciot"],
+  "min_unique_attack": 200,
+  "benign_pool": 100000,
+  "sizes": [4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384],
+  "n_test_attack_max": 2000,
+  "test_frac_max": 0.3,
+  "n_test_benign": 5000,
+  "repeats": 10,
+  "learners": ["LogReg", "kNN1", "kNN5", "RF", "HGB", "MLP"],
+  "eps_primary": 0.01,
+  "eps_secondary": 0.05,
+  "forecast_max_n": 128,
+  "bootstrap": 1000,
+  "bootstrap_tasks": 2000,
+  "id_subsample": 5000,
+  "mle_k": [10, 20],
+  "chrono_train_frac_cicids": 0.6,
+  "seed": 2026,
+  "sensitivity": {
+    "dup_kept": true,
+    "unsw_ttl": true,
+    "rf500_knn10": true,
+    "min_unique_1000": true
+  },
+  "_amendments": [
+    "2026-10-09: sensitivity variant kNN with k = 10 cannot be fitted at n = 4 flows per class (8 training points < 10 neighbours); that single size is skipped for that learner. Generalised rule in curves.run_unit: a kNN size is skipped when k > 2n. No main-analysis learner is affected (k = 1 and 5 always fit).",
+    "2026-10-10: NSL-KDD input replaced by the complete 41-feature KDDTrain+ (the earlier copy lacked logged_in, srv_count, rerror_rate, srv_diff_host_rate, dst_host_srv_count). The new file was verified row by row against the earlier copy on all shared columns, labels and difficulty levels (05_Data/nslkdd_download_verification.json). Only the three NSL-KDD tasks were rebuilt and re-run; earlier NSL-KDD outputs are archived in 06_Experiments/archive_nslkdd_36features. Geometry now uses a canonical task order so that per-task seeds do not depend on rebuild order (values for the other 21 tasks are bit-identical)."
+  ]
+}

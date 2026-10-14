@@ -1,0 +1,5 @@
+dataset,signal,threshold,n,accepted,unsafe_accepted,unsafe_all
+cicids,conf_drop,0.00148566666666664,96,33,4,48
+ciciot,conf_drop,0.00114233333333337,96,45,3,40
+nslkdd,conf_drop,0.00308766666666659,43,12,5,33
+unsw,conf_drop,-0.00147192307692313,108,5,0,7

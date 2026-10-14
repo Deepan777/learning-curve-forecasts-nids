@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.tmp
+05_Data/cache/
+05_Data/tasks/
+05_Data/source/
+data/raw/*
+!data/raw/README.md
+06_Experiments/shift/logs/
+18_Logs/
+.ipynb_checkpoints/

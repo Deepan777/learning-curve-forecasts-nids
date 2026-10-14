@@ -1,0 +1,15 @@
+sid,dataset,family,n_src,n_tgt,verifiable,unsafe,tv_distance,subtypes_src,subtypes_tgt,subtypes_only_in_target
+temporal__unsw__Analysis,unsw,Analysis,240,1733,5,3,,,,
+temporal__unsw__Backdoor,unsw,Backdoor,238,1583,0,0,,,,
+temporal__unsw__DoS,unsw,DoS,659,2000,2,1,,,,
+temporal__unsw__Exploits,unsw,Exploits,3232,2000,4,0,,,,
+temporal__unsw__Fuzzers,unsw,Fuzzers,3129,2000,5,0,,,,
+temporal__unsw__Generic,unsw,Generic,1517,2000,5,1,,,,
+temporal__unsw__Reconnaissance,unsw,Reconnaissance,1116,2000,5,2,,,,
+temporal__unsw__Shellcode,unsw,Shellcode,179,1233,5,0,,,,
+temporal__cicids__Botnet,cicids,Botnet,935,780,1,1,0.0,Bot 100.0%,Bot 100.0%,
+temporal__cicids__BruteForce,cicids,BruteForce,4490,2000,5,5,0.8795,FTP-Patator 100.0%,FTP-Patator 12.0%; SSH-Patator 87.9%,SSH-Patator
+temporal__cicids__DDoS,cicids,DDoS,14300,2000,5,3,0.0,DDoS 100.0%,DDoS 100.0%,
+temporal__cicids__DoS,cicids,DoS,27744,2000,3,3,0.3687283737024222,DoS Hulk 63.1%; DoS Slowhttptest 18.2%; DoS slowloris 18.7%,DoS GoldenEye 10.1%; DoS Hulk 90.0%,DoS GoldenEye
+temporal__cicids__PortScan,cicids,PortScan,15037,2000,5,0,0.0,PortScan 100.0%,PortScan 100.0%,
+temporal__cicids__WebAttack,cicids,WebAttack,1028,858,4,4,0.7843822843822844,Web Attack Brute Force 100.0%,Web Attack Brute Force 21.6%; Web Attack Sql Injection 2.4%; Web Attack XSS 76.0%,Web Attack Sql Injection; Web Attack XSS

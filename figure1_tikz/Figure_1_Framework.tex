@@ -1,0 +1,13 @@
+% Standalone build of Figure 1 (vector PDF at final size, 180 mm wide).
+%   tectonic Figure_1_Framework.tex   ->   Figure_1_Framework.pdf
+% The drawing itself is in fig1_framework.tikz; icons, colours and line styles are in fig1_pics.tex.
+\documentclass[border=0pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{DejaVuSans}            % sans-serif lettering, the face used by Figs 2-6
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,shapes.geometric}
+\begin{document}
+\input{fig1_framework.tikz}\unskip
+\end{document}

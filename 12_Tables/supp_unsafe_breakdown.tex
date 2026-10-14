@@ -1,0 +1,11 @@
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+ & \multicolumn{5}{c}{Classifier} & \multicolumn{4}{c}{Dataset} \\ \cmidrule(lr){2-6}\cmidrule(lr){7-10}
+Kind & LogReg & 1-NN & 5-NN & RF & HGB & NSL-KDD & UNSW-NB15 & CICIDS2017 & CIC-IoT2023 \\
+\midrule
+In-distribution & 0 (16) & 0 (18) & 0 (13) & 0 (17) & 5 (19) & 0 (7) & 0 (39) & 5 (22) & 0 (15) \\
+Temporal & 45 (11) & 55 (11) & 56 (9) & 30 (10) & 31 (13) & -- & 23 (31) & 70 (23) & -- \\
+Benign change & 0 (12) & 8 (12) & 0 (10) & 0 (12) & 14 (14) & -- & 0 (38) & 14 (22) & -- \\
+Held-out variant & 77 (30) & 85 (33) & 67 (21) & 67 (30) & 79 (28) & 92 (36) & -- & 97 (29) & 60 (77) \\
+\bottomrule
+\end{tabular}

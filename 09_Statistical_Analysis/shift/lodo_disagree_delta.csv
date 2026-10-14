@@ -1,0 +1,5 @@
+dataset,signal,threshold,n,accepted,unsafe_accepted,unsafe_all
+cicids,disagree_delta,-inf,96,0,0,48
+ciciot,disagree_delta,-inf,92,0,0,46
+nslkdd,disagree_delta,0.00053333333333334,43,12,10,33
+unsw,disagree_delta,-inf,108,0,0,7

@@ -1,0 +1,5 @@
+category,n,correct
+both_beyond_data,35,35
+measurable,104,96
+observed_censored_forecast_finite,1,0
+observed_finite_forecast_beyond,4,0

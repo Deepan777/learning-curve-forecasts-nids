@@ -1,0 +1,576 @@
+section,metric,value,ci_lo,ci_hi,n,note,source
+design,scenarios_benign,14.0,,,70.0,forecasts = scenarios x learners,09_Statistical_Analysis/shift/forecasts.csv
+design,scenarios_id,24.0,,,120.0,forecasts = scenarios x learners,09_Statistical_Analysis/shift/forecasts.csv
+design,scenarios_lovo,47.0,,,235.0,forecasts = scenarios x learners,09_Statistical_Analysis/shift/forecasts.csv
+design,scenarios_temporal,14.0,,,70.0,forecasts = scenarios x learners,09_Statistical_Analysis/shift/forecasts.csv
+design,forecasts_total,495.0,,,,,09_Statistical_Analysis/shift/forecasts.csv
+design,learner_fits_all_runs,77000.0,,,,,06_Experiments/shift/curves
+design,cpu_hours_all_runs,8.919983249694445,,,,,06_Experiments/shift/curves
+categories,benign_both_beyond,3.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,benign_conservative_miss,5.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,benign_false_assurance,1.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,benign_measurable,61.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,benign_target_never_reaches,4.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,id_both_beyond,28.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,id_conservative_miss,6.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,id_false_assurance,1.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,id_measurable,85.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,id_target_never_reaches,29.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,lovo_both_beyond,81.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,lovo_conservative_miss,8.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,lovo_false_assurance,86.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,lovo_measurable,60.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,lovo_target_never_reaches,167.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,temporal_both_beyond,9.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,temporal_conservative_miss,2.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,temporal_false_assurance,17.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,temporal_measurable,42.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+categories,temporal_target_never_reaches,26.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,within2_measurable_benign,0.9180327868852459,0.8363561847988077,0.9836065573770492,61.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,median_log2_fc_over_obs_benign,0.08623317831930875,-0.07222826760991413,0.3421158881778199,61.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,correct_incl_both_beyond_benign,0.8428571428571429,0.7567857142857143,0.9285714285714286,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,within2_measurable_id,0.8941176470588236,0.8023255813953488,0.963855421686747,85.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,median_log2_fc_over_obs_id,0.05165930725693482,-0.055330973089501356,0.1354375152298643,85.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,correct_incl_both_beyond_id,0.8666666666666667,0.7833333333333333,0.9416666666666667,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,within2_measurable_lovo,0.2833333333333333,0.19642857142857142,0.4864864864864865,60.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,median_log2_fc_over_obs_lovo,0.1215453958692024,-2.290728449548155,0.9413954780741371,60.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,correct_incl_both_beyond_lovo,0.41702127659574467,0.19727052524222335,0.6916666666666667,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,within2_measurable_temporal,0.8095238095238095,0.6499662162162162,0.926829268292683,42.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,median_log2_fc_over_obs_temporal,-0.21685327484521955,-0.7148979565215278,-0.05400077681357024,42.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,correct_incl_both_beyond_temporal,0.6142857142857143,0.44285714285714284,0.7714285714285715,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,diff_within2_temporal_minus_id_same_families,-0.09370199692780334,-0.24901163115339944,0.036478663413853765,140.0,cluster bootstrap P = 0.176,09_Statistical_Analysis/shift/forecasts.csv
+F1,diff_within2_lovo_minus_id_same_families,-0.5166666666666667,-0.6915444348576358,-0.2755576776165015,290.0,cluster bootstrap P = 0,09_Statistical_Analysis/shift/forecasts.csv
+F1,diff_within2_benign_minus_id_same_families,0.014806980433633044,-0.058436139332365744,0.09524961597542236,140.0,cluster bootstrap P = 0.838,09_Statistical_Analysis/shift/forecasts.csv
+F1,median_log2_shift_tgt_over_src_benign,-0.003445260944686599,,,63.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,median_log2_extrap_fc_over_src_benign,0.10653324408959097,,,63.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,median_log2_shift_tgt_over_src_id,-0.04246924856114594,,,87.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,median_log2_extrap_fc_over_src_id,-0.007761070165469607,,,87.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,median_log2_shift_tgt_over_src_lovo,-0.049019047247725746,,,62.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,median_log2_extrap_fc_over_src_lovo,0.08175979412873124,,,62.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,median_log2_shift_tgt_over_src_temporal,0.1745073396726679,,,44.0,,09_Statistical_Analysis/shift/forecasts.csv
+F1,median_log2_extrap_fc_over_src_temporal,-0.0054373263447705135,,,44.0,,09_Statistical_Analysis/shift/forecasts.csv
+F2,failures_benign,11.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+F2,failures_underestimate_benign,4.0,,,11.0,,09_Statistical_Analysis/shift/forecasts.csv
+F2,unsafe_rate_verifiable_benign,0.05,0.0,0.12698412698412698,60.0,,09_Statistical_Analysis/shift/forecasts.csv
+F2,failures_id,16.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+F2,failures_underestimate_id,2.0,,,16.0,,09_Statistical_Analysis/shift/forecasts.csv
+F2,unsafe_rate_verifiable_id,0.012048192771084338,0.0,0.038461538461538464,83.0,,09_Statistical_Analysis/shift/forecasts.csv
+F2,failures_lovo,137.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+F2,failures_underestimate_lovo,110.0,,,137.0,,09_Statistical_Analysis/shift/forecasts.csv
+F2,unsafe_rate_verifiable_lovo,0.7535211267605634,0.616046626984127,0.9381443298969072,142.0,,09_Statistical_Analysis/shift/forecasts.csv
+F2,failures_temporal,27.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+F2,failures_underestimate_temporal,24.0,,,27.0,,09_Statistical_Analysis/shift/forecasts.csv
+F2,unsafe_rate_verifiable_temporal,0.42592592592592593,0.21818181818181817,0.6538636363636363,54.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,verifiable_forecasts,339.0,,,495.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,unsafe_overall,0.3952802359882006,,,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,auroc_unsafe_c2st_auc,0.6880961048416454,0.5783206626987766,0.7954610931517527,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,aurc_c2st_auc,0.2276028097957207,0.1217435176652272,0.32328730120471194,339.0,random abstention AURC = unsafe rate,09_Statistical_Analysis/shift/forecasts.csv
+F3,selective_unsafe_cov50_c2st_auc,0.2411764705882353,0.09090909090909091,0.38557028112449787,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,selective_unsafe_cov75_c2st_auc,0.3607843137254902,0.23115577889447236,0.4754177940474295,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,auroc_unsafe_c2st_adj,0.6019293775027302,0.5012825741465575,0.7185833496808235,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,aurc_c2st_adj,0.2628392721919123,0.1348480486079078,0.36686600464976876,339.0,random abstention AURC = unsafe rate,09_Statistical_Analysis/shift/forecasts.csv
+F3,selective_unsafe_cov50_c2st_adj,0.38235294117647056,0.16666666666666666,0.5191377370620379,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,selective_unsafe_cov75_c2st_adj,0.41568627450980394,0.2454127091813659,0.5331002520266056,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,auroc_unsafe_ks_share,0.8915908263560247,0.7984846969927365,0.9564735635214753,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,aurc_ks_share,0.15082463298208193,0.06515310976586354,0.23397180708255616,339.0,random abstention AURC = unsafe rate,09_Statistical_Analysis/shift/forecasts.csv
+F3,selective_unsafe_cov50_ks_share,0.09411764705882353,0.013879504504504505,0.21955070603337593,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,selective_unsafe_cov75_ks_share,0.23529411764705882,0.0867579908675799,0.38662558590593177,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,auroc_unsafe_disagree_delta,0.8053148889697852,0.7239574758689148,0.8751549009404872,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,aurc_disagree_delta,0.2707124590465889,0.1322984663360712,0.39706979681567856,339.0,random abstention AURC = unsafe rate,09_Statistical_Analysis/shift/forecasts.csv
+F3,selective_unsafe_cov50_disagree_delta,0.1411764705882353,0.07040615787749754,0.24719101123595505,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,selective_unsafe_cov75_disagree_delta,0.22745098039215686,0.09545531712617139,0.38868874773139733,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,auroc_unsafe_conf_drop,0.857116854750637,0.7981399435601312,0.9115704179320471,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,aurc_conf_drop,0.18251463404725204,0.07888842544820467,0.3122390266168863,339.0,random abstention AURC = unsafe rate,09_Statistical_Analysis/shift/forecasts.csv
+F3,selective_unsafe_cov50_conf_drop,0.11176470588235295,0.03495896464646465,0.20670872664226544,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,selective_unsafe_cov75_conf_drop,0.23529411764705882,0.07916118421052631,0.3939655172413791,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,auroc_unsafe_pilot_width,0.5682562795777212,0.5078560861994267,0.6377613984997074,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,aurc_pilot_width,0.3752726876707816,0.19815388148784785,0.5238540820458396,339.0,random abstention AURC = unsafe rate,09_Statistical_Analysis/shift/forecasts.csv
+F3,selective_unsafe_cov50_pilot_width,0.3411764705882353,0.17963245921949206,0.49125306790291773,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,selective_unsafe_cov75_pilot_width,0.34509803921568627,0.19653508771929826,0.49068380706088804,339.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,auroc_unsafe_shift_only_c2st_auc,0.4883550339262791,0.345289526540928,0.646189414245322,256.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,auroc_unsafe_shift_only_c2st_adj,0.34329726755914175,0.2158370710455121,0.5179229429734842,256.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,auroc_unsafe_shift_only_ks_share,0.82798459563543,0.6790427324495892,0.9325387654148023,256.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,auroc_unsafe_shift_only_disagree_delta,0.7914909224280213,0.7097522053744266,0.8632185342404542,256.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,auroc_unsafe_shift_only_conf_drop,0.8290849073904273,0.7617473303649438,0.8992271807570417,256.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,auroc_unsafe_shift_only_pilot_width,0.5688611773335779,0.5033467112894151,0.6487203520096099,256.0,,09_Statistical_Analysis/shift/forecasts.csv
+F3,unsafe_shift_only,0.51953125,,,256.0,,09_Statistical_Analysis/shift/forecasts.csv
+F4,lodo_accept_rate_c2st_auc_benign,0.08333333333333333,,,60.0,unsafe among accepted 0.000,09_Statistical_Analysis/shift/lodo_c2st_auc.csv
+F4,lodo_accept_rate_c2st_auc_id,1.0,,,83.0,unsafe among accepted 0.012,09_Statistical_Analysis/shift/lodo_c2st_auc.csv
+F4,lodo_accept_rate_c2st_auc_lovo,0.056338028169014086,,,142.0,unsafe among accepted 1.000,09_Statistical_Analysis/shift/lodo_c2st_auc.csv
+F4,lodo_accept_rate_c2st_auc_temporal,0.16666666666666666,,,54.0,unsafe among accepted 0.444,09_Statistical_Analysis/shift/lodo_c2st_auc.csv
+F4,lodo_coverage_c2st_auc,0.30973451327433627,,,339.0,,09_Statistical_Analysis/shift/lodo_c2st_auc.csv
+F4,lodo_unsafe_accepted_c2st_auc,0.12380952380952381,,,105.0,no abstention: 0.3953,09_Statistical_Analysis/shift/lodo_c2st_auc.csv
+F4,lodo_accept_rate_c2st_adj_benign,0.0,,,60.0,unsafe among accepted nan,09_Statistical_Analysis/shift/lodo_c2st_adj.csv
+F4,lodo_accept_rate_c2st_adj_id,1.0,,,83.0,unsafe among accepted 0.012,09_Statistical_Analysis/shift/lodo_c2st_adj.csv
+F4,lodo_accept_rate_c2st_adj_lovo,0.056338028169014086,,,142.0,unsafe among accepted 1.000,09_Statistical_Analysis/shift/lodo_c2st_adj.csv
+F4,lodo_accept_rate_c2st_adj_temporal,0.0,,,54.0,unsafe among accepted nan,09_Statistical_Analysis/shift/lodo_c2st_adj.csv
+F4,lodo_coverage_c2st_adj,0.26843657817109146,,,339.0,,09_Statistical_Analysis/shift/lodo_c2st_adj.csv
+F4,lodo_unsafe_accepted_c2st_adj,0.0989010989010989,,,91.0,no abstention: 0.3953,09_Statistical_Analysis/shift/lodo_c2st_adj.csv
+F4,lodo_accept_rate_ks_share_benign,0.2833333333333333,,,60.0,unsafe among accepted 0.118,09_Statistical_Analysis/shift/lodo_ks_share.csv
+F4,lodo_accept_rate_ks_share_id,1.0,,,83.0,unsafe among accepted 0.012,09_Statistical_Analysis/shift/lodo_ks_share.csv
+F4,lodo_accept_rate_ks_share_lovo,0.02112676056338028,,,142.0,unsafe among accepted 1.000,09_Statistical_Analysis/shift/lodo_ks_share.csv
+F4,lodo_accept_rate_ks_share_temporal,0.16666666666666666,,,54.0,unsafe among accepted 0.444,09_Statistical_Analysis/shift/lodo_ks_share.csv
+F4,lodo_coverage_ks_share,0.3303834808259587,,,339.0,,09_Statistical_Analysis/shift/lodo_ks_share.csv
+F4,lodo_unsafe_accepted_ks_share,0.08928571428571429,,,112.0,no abstention: 0.3953,09_Statistical_Analysis/shift/lodo_ks_share.csv
+F4,lodo_accept_rate_disagree_delta_benign,0.0,,,60.0,unsafe among accepted nan,09_Statistical_Analysis/shift/lodo_disagree_delta.csv
+F4,lodo_accept_rate_disagree_delta_id,0.0,,,83.0,unsafe among accepted nan,09_Statistical_Analysis/shift/lodo_disagree_delta.csv
+F4,lodo_accept_rate_disagree_delta_lovo,0.08450704225352113,,,142.0,unsafe among accepted 0.833,09_Statistical_Analysis/shift/lodo_disagree_delta.csv
+F4,lodo_accept_rate_disagree_delta_temporal,0.0,,,54.0,unsafe among accepted nan,09_Statistical_Analysis/shift/lodo_disagree_delta.csv
+F4,lodo_coverage_disagree_delta,0.035398230088495575,,,339.0,,09_Statistical_Analysis/shift/lodo_disagree_delta.csv
+F4,lodo_unsafe_accepted_disagree_delta,0.8333333333333334,,,12.0,no abstention: 0.3953,09_Statistical_Analysis/shift/lodo_disagree_delta.csv
+F4,lodo_accept_rate_conf_drop_benign,0.21666666666666667,,,60.0,unsafe among accepted 0.000,09_Statistical_Analysis/shift/lodo_conf_drop.csv
+F4,lodo_accept_rate_conf_drop_id,0.40963855421686746,,,83.0,unsafe among accepted 0.029,09_Statistical_Analysis/shift/lodo_conf_drop.csv
+F4,lodo_accept_rate_conf_drop_lovo,0.24647887323943662,,,142.0,unsafe among accepted 0.429,09_Statistical_Analysis/shift/lodo_conf_drop.csv
+F4,lodo_accept_rate_conf_drop_temporal,0.09259259259259259,,,54.0,unsafe among accepted 0.000,09_Statistical_Analysis/shift/lodo_conf_drop.csv
+F4,lodo_coverage_conf_drop,0.25663716814159293,,,339.0,,09_Statistical_Analysis/shift/lodo_conf_drop.csv
+F4,lodo_unsafe_accepted_conf_drop,0.1839080459770115,,,87.0,no abstention: 0.3953,09_Statistical_Analysis/shift/lodo_conf_drop.csv
+F4,lodo_accept_rate_pilot_width_benign,0.0,,,60.0,unsafe among accepted nan,09_Statistical_Analysis/shift/lodo_pilot_width.csv
+F4,lodo_accept_rate_pilot_width_id,0.0,,,83.0,unsafe among accepted nan,09_Statistical_Analysis/shift/lodo_pilot_width.csv
+F4,lodo_accept_rate_pilot_width_lovo,0.014084507042253521,,,142.0,unsafe among accepted 1.000,09_Statistical_Analysis/shift/lodo_pilot_width.csv
+F4,lodo_accept_rate_pilot_width_temporal,0.018518518518518517,,,54.0,unsafe among accepted 1.000,09_Statistical_Analysis/shift/lodo_pilot_width.csv
+F4,lodo_coverage_pilot_width,0.008849557522123894,,,339.0,,09_Statistical_Analysis/shift/lodo_pilot_width.csv
+F4,lodo_unsafe_accepted_pilot_width,1.0,,,3.0,no abstention: 0.3953,09_Statistical_Analysis/shift/lodo_pilot_width.csv
+F5,c2st_raw_prev0.05_median,0.6311501666666666,0.5231545623635168,0.6423723333333333,24.0,"ci columns = min, max",06_Experiments/shift/signals
+F5,c2st_adj_prev0.05_median,0.5005050977867695,0.4933270666666667,0.5092020444444444,24.0,"ci columns = min, max",06_Experiments/shift/signals
+F5,ks_share_prev0.05_median,0.5333843329253366,0.009756097560975601,0.8421052631578947,24.0,"ci columns = min, max",06_Experiments/shift/signals
+F5,wilcoxon_raw_vs_adj_prev0.05_P,1.1920928955078125e-07,,,24.0,,06_Experiments/shift/signals
+F5,c2st_raw_prev0.6_median,0.5928725292570678,0.5364223657830252,0.6011205333333334,24.0,"ci columns = min, max",06_Experiments/shift/signals
+F5,c2st_adj_prev0.6_median,0.5042746074748647,0.4929961111111111,0.5431131750428869,24.0,"ci columns = min, max",06_Experiments/shift/signals
+F5,ks_share_prev0.6_median,0.5763157894736842,0.11463414634146338,0.8421052631578947,24.0,"ci columns = min, max",06_Experiments/shift/signals
+F5,wilcoxon_raw_vs_adj_prev0.6_P,1.1920928955078125e-07,,,24.0,,06_Experiments/shift/signals
+F5,lodo_false_alarm_c2st_auc_no_change,0.0,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+F5,lodo_false_alarm_c2st_auc_prev0.05,0.2916666666666667,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+F5,lodo_false_alarm_c2st_auc_prev0.6,0.0,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+F5,lodo_false_alarm_c2st_adj_no_change,0.0,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+F5,lodo_false_alarm_c2st_adj_prev0.05,0.0,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+F5,lodo_false_alarm_c2st_adj_prev0.6,0.0,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+F5,lodo_false_alarm_ks_share_no_change,0.0,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+F5,lodo_false_alarm_ks_share_prev0.05,0.8333333333333334,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+F5,lodo_false_alarm_ks_share_prev0.6,0.875,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+F5,c2st_raw_no_change_median,0.4981638444444444,0.48945838070219977,0.512933026511995,24.0,"ci columns = min, max",06_Experiments/shift/signals
+F5,c2st_adj_no_change_median,0.4983087444444445,0.49294524092615877,0.504554959571929,24.0,"ci columns = min, max",06_Experiments/shift/signals
+F5,c2st_adj_median_temporal,0.8428680573654923,0.619713819758232,0.9224784444444445,14.0,"ci columns = min, max",09_Statistical_Analysis/shift/signals_mean.csv
+F5,c2st_adj_median_lovo,0.6947049137959583,0.5190614615102479,0.7806456888888889,47.0,"ci columns = min, max",09_Statistical_Analysis/shift/signals_mean.csv
+F5,c2st_adj_median_benign,0.7493946111111112,0.6073210444444445,0.79735861083211,14.0,"ci columns = min, max",09_Statistical_Analysis/shift/signals_mean.csv
+censoring,km_median_nstar_tgt_benign,81.70431828987691,,,70.0,events 66,09_Statistical_Analysis/shift/forecasts.csv
+censoring,km_median_nstar_tgt_id,194.47501941358524,,,120.0,events 91,09_Statistical_Analysis/shift/forecasts.csv
+censoring,km_median_nstar_tgt_lovo,inf,,,235.0,events 68,09_Statistical_Analysis/shift/forecasts.csv
+censoring,km_median_nstar_tgt_temporal,219.8053951395167,,,70.0,events 44,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_target_fpr_at_source_1pct_benign,0.008400000000000001,0.00503,0.013065,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,share_target_fpr_gt_2pct_benign,0.14285714285714285,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_target_tpr_at_source_1pct_benign,0.99895,0.9970505062305296,0.9997741964827169,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_ppv_pi0.001_benign,0.10183661847059196,0.06807783852005296,0.15476717971744047,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_ppv_pi0.01_benign,0.533612400530504,0.42434477745948956,0.6488401231213585,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_ppv_pi0.1_benign,0.926392286659951,0.8902143690017041,0.9531061616443686,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_auc_tgt_largest_benign,0.9998631148404256,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+operational,high_error_but_auc_ge_0.95_benign,0.0,,,0.0,target balanced error > 5 % at the largest size while ranking AUC >= 0.95,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_target_fpr_at_source_1pct_id,0.00892,0.00465,0.009755,120.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,share_target_fpr_gt_2pct_id,0.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_target_tpr_at_source_1pct_id,0.9970452492211839,0.9728531542056075,0.999075,120.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_ppv_pi0.001_id,0.09869940655982373,0.08763764869214022,0.12877607257490223,120.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_ppv_pi0.01_id,0.524948024948025,0.4922027290448343,0.5986422300052777,120.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_ppv_pi0.1_id,0.9239853626081171,0.9142527978933509,0.9425517449765826,120.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_auc_tgt_largest_id,0.9995890300000001,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+operational,high_error_but_auc_ge_0.95_id,7.0,,,20.0,target balanced error > 5 % at the largest size while ranking AUC >= 0.95,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_target_fpr_at_source_1pct_lovo,0.0092,0.0052899999999999996,0.00995,235.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,share_target_fpr_gt_2pct_lovo,0.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_target_tpr_at_source_1pct_lovo,0.6511,0.17177413793103447,0.98655,235.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_ppv_pi0.001_lovo,0.08294603280803832,0.03414622866338611,0.09502042940776301,235.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_ppv_pi0.01_lovo,0.47718056223795446,0.2628895807825117,0.5144469782677842,235.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_ppv_pi0.1_lovo,0.909418391406864,0.7967723196084822,0.9209764914708719,235.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_auc_tgt_largest_lovo,0.96951549,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+operational,high_error_but_auc_ge_0.95_lovo,55.0,,,156.0,target balanced error > 5 % at the largest size while ranking AUC >= 0.95,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_target_fpr_at_source_1pct_temporal,0.007679047619047595,0.005275,0.013463367952522223,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,share_target_fpr_gt_2pct_temporal,0.12857142857142856,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_target_tpr_at_source_1pct_temporal,0.9940059538850285,0.9680374999999999,0.9982038376500316,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_ppv_pi0.001_temporal,0.10823223873813256,0.05943814486237816,0.1407447882350195,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_ppv_pi0.01_temporal,0.5504578536705513,0.38932623075803313,0.6230506080744046,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_ppv_pi0.1_temporal,0.9308779638747973,0.8751616542669656,0.9478667913162029,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+operational,median_auc_tgt_largest_temporal,0.9982051745321396,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+operational,high_error_but_auc_ge_0.95_temporal,4.0,,,14.0,target balanced error > 5 % at the largest size while ranking AUC >= 0.95,09_Statistical_Analysis/shift/forecasts.csv
+baseline_kappa,unsafe_rate_verifiable_benign,0.016666666666666666,,,60.0,kappa range 1.21-1.28,09_Statistical_Analysis/shift/forecasts_correction_factor.csv
+baseline_kappa,median_log2_fc_over_obs_benign,0.36845992445596026,,,61.0,,09_Statistical_Analysis/shift/forecasts_correction_factor.csv
+baseline_kappa,unsafe_rate_verifiable_id,0.012195121951219513,,,82.0,kappa range 1.21-1.28,09_Statistical_Analysis/shift/forecasts_correction_factor.csv
+baseline_kappa,median_log2_fc_over_obs_id,0.35888428979571113,,,83.0,,09_Statistical_Analysis/shift/forecasts_correction_factor.csv
+baseline_kappa,unsafe_rate_verifiable_lovo,0.7375886524822695,,,141.0,kappa range 1.28-1.28,09_Statistical_Analysis/shift/forecasts_correction_factor.csv
+baseline_kappa,median_log2_fc_over_obs_lovo,0.4559814808017552,,,59.0,,09_Statistical_Analysis/shift/forecasts_correction_factor.csv
+baseline_kappa,unsafe_rate_verifiable_temporal,0.34,,,50.0,kappa range 1.21-1.28,09_Statistical_Analysis/shift/forecasts_correction_factor.csv
+baseline_kappa,median_log2_fc_over_obs_temporal,0.025705674836676073,,,40.0,,09_Statistical_Analysis/shift/forecasts_correction_factor.csv
+baseline_M1,within2_measurable_benign,0.90625,,,64.0,,09_Statistical_Analysis/shift/forecasts.csv
+baseline_M1,unsafe_rate_verifiable_benign,0.078125,,,64.0,,09_Statistical_Analysis/shift/forecasts.csv
+baseline_M1,within2_measurable_id,0.8876404494382022,,,89.0,,09_Statistical_Analysis/shift/forecasts.csv
+baseline_M1,unsafe_rate_verifiable_id,0.023255813953488372,,,86.0,,09_Statistical_Analysis/shift/forecasts.csv
+baseline_M1,within2_measurable_lovo,0.24242424242424243,,,66.0,,09_Statistical_Analysis/shift/forecasts.csv
+baseline_M1,unsafe_rate_verifiable_lovo,0.7435897435897436,,,156.0,,09_Statistical_Analysis/shift/forecasts.csv
+baseline_M1,within2_measurable_temporal,0.8372093023255814,,,43.0,,09_Statistical_Analysis/shift/forecasts.csv
+baseline_M1,unsafe_rate_verifiable_temporal,0.42105263157894735,,,57.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,unsafe_rate_benign_cicids,0.13636363636363635,,,22.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,target_never_benign_cicids,0.13333333333333333,,,30.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,unsafe_rate_benign_unsw,0.0,,,38.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,target_never_benign_unsw,0.0,,,40.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,unsafe_rate_id_cicids,0.045454545454545456,,,22.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,target_never_id_cicids,0.1,,,30.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,unsafe_rate_id_ciciot,0.0,,,15.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,target_never_id_ciciot,0.5714285714285714,,,35.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,unsafe_rate_id_nslkdd,0.0,,,7.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,target_never_id_nslkdd,0.4,,,15.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,unsafe_rate_id_unsw,0.0,,,39.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,target_never_id_unsw,0.0,,,40.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,unsafe_rate_lovo_cicids,0.9655172413793104,,,29.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,target_never_lovo_cicids,0.8,,,40.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,unsafe_rate_lovo_ciciot,0.5974025974025974,,,77.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,target_never_lovo_ciciot,0.6466666666666666,,,150.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,unsafe_rate_lovo_nslkdd,0.9166666666666666,,,36.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,target_never_lovo_nslkdd,0.8444444444444444,,,45.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,unsafe_rate_temporal_cicids,0.6956521739130435,,,23.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,target_never_temporal_cicids,0.6,,,30.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,unsafe_rate_temporal_unsw,0.22580645161290322,,,31.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_dataset,target_never_temporal_unsw,0.2,,,40.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_benign_HGB,0.14285714285714285,,,14.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_benign_LogReg,0.0,,,12.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_benign_RF,0.0,,,12.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_benign_kNN1,0.08333333333333333,,,12.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_benign_kNN5,0.0,,,10.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_id_HGB,0.05263157894736842,,,19.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_id_LogReg,0.0,,,16.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_id_RF,0.0,,,17.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_id_kNN1,0.0,,,18.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_id_kNN5,0.0,,,13.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_lovo_HGB,0.7857142857142857,,,28.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_lovo_LogReg,0.7666666666666667,,,30.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_lovo_RF,0.6666666666666666,,,30.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_lovo_kNN1,0.8484848484848485,,,33.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_lovo_kNN5,0.6666666666666666,,,21.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_temporal_HGB,0.3076923076923077,,,13.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_temporal_LogReg,0.45454545454545453,,,11.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_temporal_RF,0.3,,,10.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_temporal_kNN1,0.5454545454545454,,,11.0,,09_Statistical_Analysis/shift/forecasts.csv
+by_learner,unsafe_rate_temporal_kNN5,0.5555555555555556,,,9.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,benign_both_beyond,3.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,benign_conservative_miss,5.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,benign_false_assurance,1.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,benign_measurable,61.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,benign_target_never_reaches,4.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,id_both_beyond,28.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,id_conservative_miss,6.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,id_false_assurance,1.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,id_measurable,85.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,id_target_never_reaches,29.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,lovo_both_beyond,80.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,lovo_conservative_miss,4.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,lovo_false_assurance,70.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,lovo_measurable,81.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,lovo_target_never_reaches,150.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,temporal_both_beyond,9.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,temporal_conservative_miss,2.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,temporal_false_assurance,17.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,temporal_measurable,42.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_categories,temporal_target_never_reaches,26.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,within2_measurable_benign,0.9180327868852459,0.8363561847988077,0.9836065573770492,61.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,median_log2_fc_over_obs_benign,0.08623317831930875,-0.07222826760991413,0.3421158881778199,61.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,correct_incl_both_beyond_benign,0.8428571428571429,0.7567857142857143,0.9285714285714286,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,within2_measurable_id,0.8941176470588236,0.8023255813953488,0.963855421686747,85.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,median_log2_fc_over_obs_id,0.035158564863074546,-0.06249609535374326,0.13655975182770747,85.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,correct_incl_both_beyond_id,0.8666666666666667,0.7833333333333333,0.9416666666666667,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,within2_measurable_lovo,0.2839506172839506,0.18492360379346678,0.47058823529411764,81.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,median_log2_fc_over_obs_lovo,-0.06646818588709812,-2.182752610839142,0.5560079654632945,81.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,correct_incl_both_beyond_lovo,0.43829787234042555,0.23331632653061224,0.693428571428571,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,within2_measurable_temporal,0.8095238095238095,0.6499662162162162,0.926829268292683,42.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,median_log2_fc_over_obs_temporal,-0.21685327484521955,-0.7148979565215278,-0.05400077681357024,42.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,correct_incl_both_beyond_temporal,0.6142857142857143,0.44285714285714284,0.7714285714285715,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,diff_within2_temporal_minus_id_same_families,-0.09370199692780334,-0.24901163115339944,0.036478663413853765,140.0,cluster bootstrap P = 0.176,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,diff_within2_lovo_minus_id_same_families,-0.5160493827160495,-0.6959521080588112,-0.27775553012967213,290.0,cluster bootstrap P = 0,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,diff_within2_benign_minus_id_same_families,0.014806980433633044,-0.058436139332365744,0.09524961597542236,140.0,cluster bootstrap P = 0.838,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,median_log2_shift_tgt_over_src_benign,-0.003445260944686599,,,63.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,median_log2_extrap_fc_over_src_benign,0.10653324408959097,,,63.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,median_log2_shift_tgt_over_src_id,-0.02898505956610358,,,87.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,median_log2_extrap_fc_over_src_id,-0.029757973103641172,,,87.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,median_log2_shift_tgt_over_src_lovo,0.08136860239004,,,82.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,median_log2_extrap_fc_over_src_lovo,0.020955985643722815,,,82.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,median_log2_shift_tgt_over_src_temporal,0.1745073396726679,,,44.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F1,median_log2_extrap_fc_over_src_temporal,-0.0054373263447705135,,,44.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F2,failures_benign,11.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F2,failures_underestimate_benign,4.0,,,11.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F2,unsafe_rate_verifiable_benign,0.05,0.0,0.12698412698412698,60.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F2,failures_id,16.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F2,failures_underestimate_id,2.0,,,16.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F2,unsafe_rate_verifiable_id,0.012048192771084338,0.0,0.038461538461538464,83.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F2,failures_lovo,132.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F2,failures_underestimate_lovo,105.0,,,132.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F2,unsafe_rate_verifiable_lovo,0.6917808219178082,0.5430416272469253,0.9090909090909091,146.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F2,failures_temporal,27.0,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F2,failures_underestimate_temporal,24.0,,,27.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F2,unsafe_rate_verifiable_temporal,0.42592592592592593,0.21818181818181817,0.6538636363636363,54.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,verifiable_forecasts,343.0,,,495.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,unsafe_overall,0.37317784256559766,,,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,auroc_unsafe_c2st_auc,0.6500181686046511,0.5284863861054993,0.7653686464530385,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,aurc_c2st_auc,0.22809816282031797,0.12132489833380268,0.32394704100224225,343.0,random abstention AURC = unsafe rate,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,selective_unsafe_cov50_c2st_auc,0.23837209302325582,0.09090909090909091,0.4273442416614221,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,selective_unsafe_cov75_c2st_auc,0.37209302325581395,0.22814913072928428,0.48077531645569616,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,auroc_unsafe_c2st_adj,0.5755268895348837,0.47048823381656285,0.6955377131362112,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,aurc_c2st_adj,0.258237967822566,0.1354502166153902,0.36131018389049274,343.0,random abstention AURC = unsafe rate,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,selective_unsafe_cov50_c2st_adj,0.38372093023255816,0.16666666666666666,0.518348623853211,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,selective_unsafe_cov75_c2st_adj,0.40310077519379844,0.23728616476152936,0.5318115942028984,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,auroc_unsafe_ks_share,0.8836300872093024,0.7840989423907071,0.9530766620042783,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,aurc_ks_share,0.14213170715033818,0.06264934372407925,0.21857038767846446,343.0,random abstention AURC = unsafe rate,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,selective_unsafe_cov50_ks_share,0.09302325581395349,0.016942090395480225,0.21634794776119404,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,selective_unsafe_cov75_ks_share,0.20930232558139536,0.08211573299888518,0.35449417631468816,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,auroc_unsafe_disagree_delta,0.816624273255814,0.7191878201821658,0.8822123931148086,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,aurc_disagree_delta,0.25288003373915946,0.10951870873048265,0.38904473258528754,343.0,random abstention AURC = unsafe rate,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,selective_unsafe_cov50_disagree_delta,0.13372093023255813,0.06535592497868713,0.22631827209533267,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,selective_unsafe_cov75_disagree_delta,0.2054263565891473,0.08094316674038037,0.35691554095168543,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,auroc_unsafe_conf_drop,0.8593204941860465,0.7957362300185764,0.9132901228715014,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,aurc_conf_drop,0.16577940764967947,0.07067876414771111,0.29116473893358347,343.0,random abstention AURC = unsafe rate,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,selective_unsafe_cov50_conf_drop,0.09883720930232558,0.03471623563218391,0.18056144067796606,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,selective_unsafe_cov75_conf_drop,0.20930232558139536,0.06908259423503327,0.36975617018460927,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,auroc_unsafe_pilot_width,0.5516351744186047,0.5006747485185815,0.610825373919575,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,aurc_pilot_width,0.3619998110407653,0.19904014062364372,0.5052841177538069,343.0,random abstention AURC = unsafe rate,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,selective_unsafe_cov50_pilot_width,0.3372093023255814,0.1811304347826087,0.47503676470588213,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,selective_unsafe_cov75_pilot_width,0.3449612403100775,0.19819248182192345,0.4781231630853633,343.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,auroc_unsafe_shift_only_c2st_auc,0.4420993428453022,0.3027407559702613,0.6153744911479608,260.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,auroc_unsafe_shift_only_c2st_adj,0.3203777159434018,0.19582661619877087,0.5012158991699496,260.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,auroc_unsafe_shift_only_ks_share,0.8207033331359895,0.6613445550921397,0.9269242648620167,260.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,auroc_unsafe_shift_only_disagree_delta,0.8058433485288024,0.713077914195036,0.8743979113384485,260.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,auroc_unsafe_shift_only_conf_drop,0.8343200520987508,0.7694160494907518,0.9024283721897336,260.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,auroc_unsafe_shift_only_pilot_width,0.5457936179030253,0.4877690352247064,0.6106956015242689,260.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F3,unsafe_shift_only,0.48846153846153845,,,260.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_F4,lodo_accept_rate_c2st_auc_benign,0.08333333333333333,,,60.0,unsafe among accepted 0.000,09_Statistical_Analysis/shift/sens_allfeat_lodo_c2st_auc.csv
+sens_allfeat_F4,lodo_accept_rate_c2st_auc_id,1.0,,,83.0,unsafe among accepted 0.012,09_Statistical_Analysis/shift/sens_allfeat_lodo_c2st_auc.csv
+sens_allfeat_F4,lodo_accept_rate_c2st_auc_lovo,0.0547945205479452,,,146.0,unsafe among accepted 1.000,09_Statistical_Analysis/shift/sens_allfeat_lodo_c2st_auc.csv
+sens_allfeat_F4,lodo_accept_rate_c2st_auc_temporal,0.16666666666666666,,,54.0,unsafe among accepted 0.444,09_Statistical_Analysis/shift/sens_allfeat_lodo_c2st_auc.csv
+sens_allfeat_F4,lodo_coverage_c2st_auc,0.30612244897959184,,,343.0,,09_Statistical_Analysis/shift/sens_allfeat_lodo_c2st_auc.csv
+sens_allfeat_F4,lodo_unsafe_accepted_c2st_auc,0.12380952380952381,,,105.0,no abstention: 0.3732,09_Statistical_Analysis/shift/sens_allfeat_lodo_c2st_auc.csv
+sens_allfeat_F4,lodo_accept_rate_c2st_adj_benign,0.0,,,60.0,unsafe among accepted nan,09_Statistical_Analysis/shift/sens_allfeat_lodo_c2st_adj.csv
+sens_allfeat_F4,lodo_accept_rate_c2st_adj_id,1.0,,,83.0,unsafe among accepted 0.012,09_Statistical_Analysis/shift/sens_allfeat_lodo_c2st_adj.csv
+sens_allfeat_F4,lodo_accept_rate_c2st_adj_lovo,0.0547945205479452,,,146.0,unsafe among accepted 1.000,09_Statistical_Analysis/shift/sens_allfeat_lodo_c2st_adj.csv
+sens_allfeat_F4,lodo_accept_rate_c2st_adj_temporal,0.0,,,54.0,unsafe among accepted nan,09_Statistical_Analysis/shift/sens_allfeat_lodo_c2st_adj.csv
+sens_allfeat_F4,lodo_coverage_c2st_adj,0.2653061224489796,,,343.0,,09_Statistical_Analysis/shift/sens_allfeat_lodo_c2st_adj.csv
+sens_allfeat_F4,lodo_unsafe_accepted_c2st_adj,0.0989010989010989,,,91.0,no abstention: 0.3732,09_Statistical_Analysis/shift/sens_allfeat_lodo_c2st_adj.csv
+sens_allfeat_F4,lodo_accept_rate_ks_share_benign,0.2833333333333333,,,60.0,unsafe among accepted 0.118,09_Statistical_Analysis/shift/sens_allfeat_lodo_ks_share.csv
+sens_allfeat_F4,lodo_accept_rate_ks_share_id,1.0,,,83.0,unsafe among accepted 0.012,09_Statistical_Analysis/shift/sens_allfeat_lodo_ks_share.csv
+sens_allfeat_F4,lodo_accept_rate_ks_share_lovo,0.02054794520547945,,,146.0,unsafe among accepted 1.000,09_Statistical_Analysis/shift/sens_allfeat_lodo_ks_share.csv
+sens_allfeat_F4,lodo_accept_rate_ks_share_temporal,0.16666666666666666,,,54.0,unsafe among accepted 0.444,09_Statistical_Analysis/shift/sens_allfeat_lodo_ks_share.csv
+sens_allfeat_F4,lodo_coverage_ks_share,0.32653061224489793,,,343.0,,09_Statistical_Analysis/shift/sens_allfeat_lodo_ks_share.csv
+sens_allfeat_F4,lodo_unsafe_accepted_ks_share,0.08928571428571429,,,112.0,no abstention: 0.3732,09_Statistical_Analysis/shift/sens_allfeat_lodo_ks_share.csv
+sens_allfeat_F4,lodo_accept_rate_disagree_delta_benign,0.0,,,60.0,unsafe among accepted nan,09_Statistical_Analysis/shift/sens_allfeat_lodo_disagree_delta.csv
+sens_allfeat_F4,lodo_accept_rate_disagree_delta_id,0.08433734939759036,,,83.0,unsafe among accepted 0.000,09_Statistical_Analysis/shift/sens_allfeat_lodo_disagree_delta.csv
+sens_allfeat_F4,lodo_accept_rate_disagree_delta_lovo,0.0821917808219178,,,146.0,unsafe among accepted 0.833,09_Statistical_Analysis/shift/sens_allfeat_lodo_disagree_delta.csv
+sens_allfeat_F4,lodo_accept_rate_disagree_delta_temporal,0.0,,,54.0,unsafe among accepted nan,09_Statistical_Analysis/shift/sens_allfeat_lodo_disagree_delta.csv
+sens_allfeat_F4,lodo_coverage_disagree_delta,0.05539358600583091,,,343.0,,09_Statistical_Analysis/shift/sens_allfeat_lodo_disagree_delta.csv
+sens_allfeat_F4,lodo_unsafe_accepted_disagree_delta,0.5263157894736842,,,19.0,no abstention: 0.3732,09_Statistical_Analysis/shift/sens_allfeat_lodo_disagree_delta.csv
+sens_allfeat_F4,lodo_accept_rate_conf_drop_benign,0.21666666666666667,,,60.0,unsafe among accepted 0.000,09_Statistical_Analysis/shift/sens_allfeat_lodo_conf_drop.csv
+sens_allfeat_F4,lodo_accept_rate_conf_drop_id,0.46987951807228917,,,83.0,unsafe among accepted 0.026,09_Statistical_Analysis/shift/sens_allfeat_lodo_conf_drop.csv
+sens_allfeat_F4,lodo_accept_rate_conf_drop_lovo,0.2602739726027397,,,146.0,unsafe among accepted 0.289,09_Statistical_Analysis/shift/sens_allfeat_lodo_conf_drop.csv
+sens_allfeat_F4,lodo_accept_rate_conf_drop_temporal,0.09259259259259259,,,54.0,unsafe among accepted 0.000,09_Statistical_Analysis/shift/sens_allfeat_lodo_conf_drop.csv
+sens_allfeat_F4,lodo_coverage_conf_drop,0.27696793002915454,,,343.0,,09_Statistical_Analysis/shift/sens_allfeat_lodo_conf_drop.csv
+sens_allfeat_F4,lodo_unsafe_accepted_conf_drop,0.12631578947368421,,,95.0,no abstention: 0.3732,09_Statistical_Analysis/shift/sens_allfeat_lodo_conf_drop.csv
+sens_allfeat_F4,lodo_accept_rate_pilot_width_benign,0.0,,,60.0,unsafe among accepted nan,09_Statistical_Analysis/shift/sens_allfeat_lodo_pilot_width.csv
+sens_allfeat_F4,lodo_accept_rate_pilot_width_id,0.0,,,83.0,unsafe among accepted nan,09_Statistical_Analysis/shift/sens_allfeat_lodo_pilot_width.csv
+sens_allfeat_F4,lodo_accept_rate_pilot_width_lovo,0.0136986301369863,,,146.0,unsafe among accepted 1.000,09_Statistical_Analysis/shift/sens_allfeat_lodo_pilot_width.csv
+sens_allfeat_F4,lodo_accept_rate_pilot_width_temporal,0.0,,,54.0,unsafe among accepted nan,09_Statistical_Analysis/shift/sens_allfeat_lodo_pilot_width.csv
+sens_allfeat_F4,lodo_coverage_pilot_width,0.0058309037900874635,,,343.0,,09_Statistical_Analysis/shift/sens_allfeat_lodo_pilot_width.csv
+sens_allfeat_F4,lodo_unsafe_accepted_pilot_width,1.0,,,2.0,no abstention: 0.3732,09_Statistical_Analysis/shift/sens_allfeat_lodo_pilot_width.csv
+sens_allfeat_F5,c2st_raw_prev0.05_median,0.6302482,0.5231545623635168,0.6423723333333333,24.0,"ci columns = min, max",06_Experiments/shift/signals
+sens_allfeat_F5,c2st_adj_prev0.05_median,0.5012604326886151,0.4907079333333333,0.5092020444444444,24.0,"ci columns = min, max",06_Experiments/shift/signals
+sens_allfeat_F5,ks_share_prev0.05_median,0.5608695652173913,0.009756097560975601,0.8421052631578947,24.0,"ci columns = min, max",06_Experiments/shift/signals
+sens_allfeat_F5,wilcoxon_raw_vs_adj_prev0.05_P,1.1920928955078125e-07,,,24.0,,06_Experiments/shift/signals
+sens_allfeat_F5,c2st_raw_prev0.6_median,0.5928725292570678,0.5364223657830252,0.6083778769696362,24.0,"ci columns = min, max",06_Experiments/shift/signals
+sens_allfeat_F5,c2st_adj_prev0.6_median,0.5048254074748648,0.4928557111111111,0.5535581661128621,24.0,"ci columns = min, max",06_Experiments/shift/signals
+sens_allfeat_F5,ks_share_prev0.6_median,0.5852402745995424,0.11463414634146338,0.8421052631578947,24.0,"ci columns = min, max",06_Experiments/shift/signals
+sens_allfeat_F5,wilcoxon_raw_vs_adj_prev0.6_P,1.1920928955078125e-07,,,24.0,,06_Experiments/shift/signals
+sens_allfeat_F5,lodo_false_alarm_c2st_auc_no_change,0.0,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+sens_allfeat_F5,lodo_false_alarm_c2st_auc_prev0.05,0.3333333333333333,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+sens_allfeat_F5,lodo_false_alarm_c2st_auc_prev0.6,0.0,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+sens_allfeat_F5,lodo_false_alarm_c2st_adj_no_change,0.0,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+sens_allfeat_F5,lodo_false_alarm_c2st_adj_prev0.05,0.0,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+sens_allfeat_F5,lodo_false_alarm_c2st_adj_prev0.6,0.041666666666666664,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+sens_allfeat_F5,lodo_false_alarm_ks_share_no_change,0.0,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+sens_allfeat_F5,lodo_false_alarm_ks_share_prev0.05,0.8333333333333334,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+sens_allfeat_F5,lodo_false_alarm_ks_share_prev0.6,0.875,,,24.0,share of in-distribution tasks abstained at the transferred threshold,06_Experiments/shift/signals
+sens_allfeat_F5,c2st_raw_no_change_median,0.49806378888888886,0.48945838070219977,0.5085519823691944,24.0,"ci columns = min, max",06_Experiments/shift/signals
+sens_allfeat_F5,c2st_adj_no_change_median,0.4995206111111111,0.49294524092615877,0.5049113472953605,24.0,"ci columns = min, max",06_Experiments/shift/signals
+sens_allfeat_F5,c2st_adj_median_temporal,0.8428680573654923,0.619713819758232,0.9224784444444445,14.0,"ci columns = min, max",09_Statistical_Analysis/shift/signals_mean.csv
+sens_allfeat_F5,c2st_adj_median_lovo,0.6988002,0.5190614615102479,0.7816268,47.0,"ci columns = min, max",09_Statistical_Analysis/shift/signals_mean.csv
+sens_allfeat_F5,c2st_adj_median_benign,0.7493946111111112,0.6073210444444445,0.79735861083211,14.0,"ci columns = min, max",09_Statistical_Analysis/shift/signals_mean.csv
+sens_allfeat_censoring,km_median_nstar_tgt_benign,81.70431828987691,,,70.0,events 66,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_censoring,km_median_nstar_tgt_id,168.72010887040184,,,120.0,events 91,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_censoring,km_median_nstar_tgt_lovo,inf,,,235.0,events 85,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_censoring,km_median_nstar_tgt_temporal,219.8053951395167,,,70.0,events 44,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_target_fpr_at_source_1pct_benign,0.008400000000000001,0.00503,0.013065,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,share_target_fpr_gt_2pct_benign,0.14285714285714285,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_target_tpr_at_source_1pct_benign,0.99895,0.9970505062305296,0.9997741964827169,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_ppv_pi0.001_benign,0.10183661847059196,0.06807783852005296,0.15476717971744047,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_ppv_pi0.01_benign,0.533612400530504,0.42434477745948956,0.6488401231213585,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_ppv_pi0.1_benign,0.926392286659951,0.8902143690017041,0.9531061616443686,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_auc_tgt_largest_benign,0.9998631148404256,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,high_error_but_auc_ge_0.95_benign,0.0,,,0.0,target balanced error > 5 % at the largest size while ranking AUC >= 0.95,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_target_fpr_at_source_1pct_id,0.008969999999999999,0.004565,0.009859999999999999,120.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,share_target_fpr_gt_2pct_id,0.0,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_target_tpr_at_source_1pct_id,0.9976,0.9728531542056075,0.999075,120.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_ppv_pi0.001_id,0.09869940655982373,0.08687306582400794,0.12877607257490223,120.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_ppv_pi0.01_id,0.524948024948025,0.48980343075903715,0.5986422300052777,120.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_ppv_pi0.1_id,0.9239853626081171,0.9134971852258684,0.9425517449765826,120.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_auc_tgt_largest_id,0.9996668325,,,120.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,high_error_but_auc_ge_0.95_id,7.0,,,19.0,target balanced error > 5 % at the largest size while ranking AUC >= 0.95,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_target_fpr_at_source_1pct_lovo,0.00916,0.00523,0.01006,235.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,share_target_fpr_gt_2pct_lovo,0.0,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_target_tpr_at_source_1pct_lovo,0.76385,0.17157624415931166,0.9950500000000001,235.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_ppv_pi0.001_lovo,0.08345082784226882,0.04343907150574055,0.09480785231673489,235.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_ppv_pi0.01_lovo,0.47883179527108866,0.3142426727602326,0.5138307059211711,235.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_ppv_pi0.1_lovo,0.909962041745291,0.8344530293703379,0.9207972843227359,235.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_auc_tgt_largest_lovo,0.99075,,,235.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,high_error_but_auc_ge_0.95_lovo,45.0,,,137.0,target balanced error > 5 % at the largest size while ranking AUC >= 0.95,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_target_fpr_at_source_1pct_temporal,0.007679047619047595,0.005275,0.013463367952522223,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,share_target_fpr_gt_2pct_temporal,0.12857142857142856,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_target_tpr_at_source_1pct_temporal,0.9940059538850285,0.9680374999999999,0.9982038376500316,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_ppv_pi0.001_temporal,0.10823223873813256,0.05943814486237816,0.1407447882350195,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_ppv_pi0.01_temporal,0.5504578536705513,0.38932623075803313,0.6230506080744046,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_ppv_pi0.1_temporal,0.9308779638747973,0.8751616542669656,0.9478667913162029,70.0,ci columns = IQR,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,median_auc_tgt_largest_temporal,0.9982051745321396,,,70.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_operational,high_error_but_auc_ge_0.95_temporal,4.0,,,14.0,target balanced error > 5 % at the largest size while ranking AUC >= 0.95,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_baseline_kappa,unsafe_rate_verifiable_benign,0.016666666666666666,,,60.0,kappa range 1.17-1.28,09_Statistical_Analysis/shift/sens_allfeat_forecasts_correction_factor.csv
+sens_allfeat_baseline_kappa,median_log2_fc_over_obs_benign,0.31825603619915577,,,61.0,,09_Statistical_Analysis/shift/sens_allfeat_forecasts_correction_factor.csv
+sens_allfeat_baseline_kappa,unsafe_rate_verifiable_id,0.012195121951219513,,,82.0,kappa range 1.17-1.28,09_Statistical_Analysis/shift/sens_allfeat_forecasts_correction_factor.csv
+sens_allfeat_baseline_kappa,median_log2_fc_over_obs_id,0.3040681511945748,,,83.0,,09_Statistical_Analysis/shift/sens_allfeat_forecasts_correction_factor.csv
+sens_allfeat_baseline_kappa,unsafe_rate_verifiable_lovo,0.6620689655172414,,,145.0,kappa range 1.28-1.28,09_Statistical_Analysis/shift/sens_allfeat_forecasts_correction_factor.csv
+sens_allfeat_baseline_kappa,median_log2_fc_over_obs_lovo,0.2544420354219429,,,80.0,,09_Statistical_Analysis/shift/sens_allfeat_forecasts_correction_factor.csv
+sens_allfeat_baseline_kappa,unsafe_rate_verifiable_temporal,0.34,,,50.0,kappa range 1.17-1.28,09_Statistical_Analysis/shift/sens_allfeat_forecasts_correction_factor.csv
+sens_allfeat_baseline_kappa,median_log2_fc_over_obs_temporal,-0.017169523487891594,,,41.0,,09_Statistical_Analysis/shift/sens_allfeat_forecasts_correction_factor.csv
+sens_allfeat_baseline_M1,within2_measurable_benign,0.90625,,,64.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_baseline_M1,unsafe_rate_verifiable_benign,0.078125,,,64.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_baseline_M1,within2_measurable_id,0.898876404494382,,,89.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_baseline_M1,unsafe_rate_verifiable_id,0.023255813953488372,,,86.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_baseline_M1,within2_measurable_lovo,0.30120481927710846,,,83.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_baseline_M1,unsafe_rate_verifiable_lovo,0.6858974358974359,,,156.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_baseline_M1,within2_measurable_temporal,0.8372093023255814,,,43.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_baseline_M1,unsafe_rate_verifiable_temporal,0.42105263157894735,,,57.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,unsafe_rate_benign_cicids,0.13636363636363635,,,22.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,target_never_benign_cicids,0.13333333333333333,,,30.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,unsafe_rate_benign_unsw,0.0,,,38.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,target_never_benign_unsw,0.0,,,40.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,unsafe_rate_id_cicids,0.045454545454545456,,,22.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,target_never_id_cicids,0.1,,,30.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,unsafe_rate_id_ciciot,0.0,,,15.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,target_never_id_ciciot,0.5714285714285714,,,35.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,unsafe_rate_id_nslkdd,0.0,,,7.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,target_never_id_nslkdd,0.4,,,15.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,unsafe_rate_id_unsw,0.0,,,39.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,target_never_id_unsw,0.0,,,40.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,unsafe_rate_lovo_cicids,0.9655172413793104,,,29.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,target_never_lovo_cicids,0.8,,,40.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,unsafe_rate_lovo_ciciot,0.49382716049382713,,,81.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,target_never_lovo_ciciot,0.5333333333333333,,,150.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,unsafe_rate_lovo_nslkdd,0.9166666666666666,,,36.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,target_never_lovo_nslkdd,0.8444444444444444,,,45.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,unsafe_rate_temporal_cicids,0.6956521739130435,,,23.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,target_never_temporal_cicids,0.6,,,30.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,unsafe_rate_temporal_unsw,0.22580645161290322,,,31.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_dataset,target_never_temporal_unsw,0.2,,,40.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_benign_HGB,0.14285714285714285,,,14.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_benign_LogReg,0.0,,,12.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_benign_RF,0.0,,,12.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_benign_kNN1,0.08333333333333333,,,12.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_benign_kNN5,0.0,,,10.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_id_HGB,0.05263157894736842,,,19.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_id_LogReg,0.0,,,16.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_id_RF,0.0,,,17.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_id_kNN1,0.0,,,18.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_id_kNN5,0.0,,,13.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_lovo_HGB,0.7096774193548387,,,31.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_lovo_LogReg,0.7,,,30.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_lovo_RF,0.625,,,32.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_lovo_kNN1,0.8125,,,32.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_lovo_kNN5,0.5714285714285714,,,21.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_temporal_HGB,0.3076923076923077,,,13.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_temporal_LogReg,0.45454545454545453,,,11.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_temporal_RF,0.3,,,10.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_temporal_kNN1,0.5454545454545454,,,11.0,,09_Statistical_Analysis/shift/forecasts.csv
+sens_allfeat_by_learner,unsafe_rate_temporal_kNN5,0.5555555555555556,,,9.0,,09_Statistical_Analysis/shift/forecasts.csv
+artefact,ciciot_id_reached_all_vs_noart_HGB,3.0,,,3.0,value = tasks reaching 1% with artefacts; n = without,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_median_log2_noart_over_all_HGB,0.3740568073901378,,,3.0,,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_median_factor_noart_over_all_HGB,1.2959919952569334,,,3.0,,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_reached_all_vs_noart_LogReg,3.0,,,3.0,value = tasks reaching 1% with artefacts; n = without,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_median_log2_noart_over_all_LogReg,0.34359924831845395,,,3.0,,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_median_factor_noart_over_all_LogReg,1.2689183570473361,,,3.0,,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_reached_all_vs_noart_RF,3.0,,,3.0,value = tasks reaching 1% with artefacts; n = without,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_median_log2_noart_over_all_RF,0.7549537583628528,,,3.0,,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_median_factor_noart_over_all_RF,1.687577500719642,,,3.0,,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_reached_all_vs_noart_kNN1,3.0,,,3.0,value = tasks reaching 1% with artefacts; n = without,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_median_log2_noart_over_all_kNN1,0.83914528421798,,,3.0,,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_median_factor_noart_over_all_kNN1,1.7889899517685293,,,3.0,,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_reached_all_vs_noart_kNN5,3.0,,,3.0,value = tasks reaching 1% with artefacts; n = without,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_median_log2_noart_over_all_kNN5,0.2878953818003317,,,3.0,,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+artefact,ciciot_id_median_factor_noart_over_all_kNN5,1.2208579779537583,,,3.0,,09_Statistical_Analysis/shift/artefact_effect_id_nstar.csv
+F6,more_data_be_Recon_HGB_n1024,0.07272999999999996,0.0653999999999999,0.08105,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Recon_HGB_n4096,0.06421999999999994,0.0591999999999999,0.0723999999999999,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Recon_HGB_n16384,0.05837999999999999,0.0547,0.06335,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Recon_HGB_n32768,0.05652999999999998,0.052,0.0603999999999999,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Recon_RF_n1024,0.08427999999999994,0.07905,0.08945,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Recon_RF_n4096,0.06914999999999996,0.0643999999999999,0.07385,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Recon_RF_n16384,0.06232999999999996,0.0574,0.06795,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Recon_RF_n32768,0.058569999999999935,0.05205,0.0649999999999999,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Spoofing_HGB_n1024,0.08421999999999993,0.0783999999999999,0.08965,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Spoofing_HGB_n4096,0.06920999999999997,0.06435,0.0769999999999999,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Spoofing_HGB_n16384,0.060819999999999944,0.05695,0.06635,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Spoofing_HGB_n32768,0.059219999999999995,0.0538,0.06495,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Spoofing_RF_n1024,0.08257999999999997,0.0776999999999999,0.0902,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Spoofing_RF_n4096,0.07013999999999994,0.0667999999999999,0.0769999999999999,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Spoofing_RF_n16384,0.062419999999999934,0.0594999999999999,0.0670999999999999,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,more_data_be_Spoofing_RF_n32768,0.05817,0.05365,0.06575,5.0,"ci columns = min, max over repeats",06_Experiments/shift/floors/more_data.csv
+F6,capacity_default_BruteForce_HGB,0.056612855007473796,,,3.0,,06_Experiments/shift/floors/capacity.csv
+F6,capacity_tuned_BruteForce_HGB,0.055111061285500695,,,3.0,"{'it': 1000, 'leaves': 31, 'msl': 5}; {'it': 200, 'leaves': 255, 'msl': 20}; {'it': 200, 'leaves': 31, 'msl': 5}",06_Experiments/shift/floors/capacity.csv
+F6,capacity_default_BruteForce_RF,0.06449536621823614,,,3.0,,06_Experiments/shift/floors/capacity.csv
+F6,capacity_tuned_BruteForce_RF,0.06272690582959638,,,3.0,"{'mf': 'sqrt', 'leaf': 1}",06_Experiments/shift/floors/capacity.csv
+F6,capacity_default_Recon_HGB,0.05845,,,3.0,,06_Experiments/shift/floors/capacity.csv
+F6,capacity_tuned_Recon_HGB,0.05478333333333327,,,3.0,"{'it': 1000, 'leaves': 255, 'msl': 5}; {'it': 200, 'leaves': 255, 'msl': 20}; {'it': 200, 'leaves': 255, 'msl': 5}",06_Experiments/shift/floors/capacity.csv
+F6,capacity_default_Recon_RF,0.0615166666666666,,,3.0,,06_Experiments/shift/floors/capacity.csv
+F6,capacity_tuned_Recon_RF,0.056133333333333306,,,3.0,"{'mf': 0.5, 'leaf': 1}",06_Experiments/shift/floors/capacity.csv
+F6,capacity_default_Spoofing_HGB,0.0628333333333333,,,3.0,,06_Experiments/shift/floors/capacity.csv
+F6,capacity_tuned_Spoofing_HGB,0.0588166666666666,,,3.0,"{'it': 1000, 'leaves': 255, 'msl': 5}",06_Experiments/shift/floors/capacity.csv
+F6,capacity_default_Spoofing_RF,0.06176666666666656,,,3.0,,06_Experiments/shift/floors/capacity.csv
+F6,capacity_tuned_Spoofing_RF,0.05879999999999996,,,3.0,"{'mf': 0.5, 'leaf': 1}",06_Experiments/shift/floors/capacity.csv
+F6,capacity_default_Web_HGB,0.043170682730923664,,,3.0,,06_Experiments/shift/floors/capacity.csv
+F6,capacity_tuned_Web_HGB,0.042969076305220864,,,3.0,"{'it': 1000, 'leaves': 255, 'msl': 5}; {'it': 1000, 'leaves': 31, 'msl': 20}; {'it': 200, 'leaves': 31, 'msl': 5}",06_Experiments/shift/floors/capacity.csv
+F6,capacity_default_Web_RF,0.05215140562248993,,,3.0,,06_Experiments/shift/floors/capacity.csv
+F6,capacity_tuned_Web_RF,0.04335381526104413,,,3.0,"{'mf': 0.5, 'leaf': 1}",06_Experiments/shift/floors/capacity.csv
+F6,subtype_miss_BruteForce_HGB_DictionaryBruteForce,0.0551569506726457,,,123.0,share of family misses 1.000,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_BruteForce_RF_DictionaryBruteForce,0.05515695067264568,,,123.0,share of family misses 1.000,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Recon_HGB_Recon-HostDiscovery,0.026305647468237943,,,99.0,share of family misses 0.137,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Recon_HGB_Recon-OSScan,0.1532989655878751,,,429.0,share of family misses 0.592,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Recon_HGB_Recon-PingSweep,0.19832442067736183,,,13.0,share of family misses 0.018,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Recon_HGB_Recon-PortScan,0.07968076068962714,,,184.0,share of family misses 0.254,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Recon_HGB_VulnerabilityScan,0.0,,,0.0,share of family misses 0.000,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Recon_RF_Recon-HostDiscovery,0.02648001116445468,,,99.0,share of family misses 0.141,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Recon_RF_Recon-OSScan,0.15811735573262825,,,443.0,share of family misses 0.631,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Recon_RF_Recon-PingSweep,0.02666666666666666,,,2.0,share of family misses 0.003,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Recon_RF_Recon-PortScan,0.06863933977318439,,,158.0,share of family misses 0.225,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Recon_RF_VulnerabilityScan,0.0,,,0.0,share of family misses 0.000,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Spoofing_HGB_DNS_Spoofing,0.08538382691646959,,,307.0,share of family misses 0.432,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Spoofing_HGB_MITM-ArpSpoofing,0.0629324182586557,,,403.0,share of family misses 0.568,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Spoofing_RF_DNS_Spoofing,0.07794321643775191,,,280.0,share of family misses 0.399,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Spoofing_RF_MITM-ArpSpoofing,0.06571475124257864,,,421.0,share of family misses 0.601,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Web_HGB_Backdoor_Malware,0.026805722805881983,,,16.0,share of family misses 0.103,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Web_HGB_BrowserHijacking,0.10735398174901474,,,102.0,share of family misses 0.654,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Web_HGB_CommandInjection,0.01404909050525244,,,13.0,share of family misses 0.083,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Web_HGB_SqlInjection,0.022350667486476843,,,19.0,share of family misses 0.122,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Web_HGB_Uploading_Attack,0.0051282051282051195,,,1.0,share of family misses 0.006,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Web_HGB_XSS,0.0080998454612645,,,5.0,share of family misses 0.032,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Web_RF_Backdoor_Malware,0.01166399344196346,,,7.0,share of family misses 0.059,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Web_RF_BrowserHijacking,0.08706264310002307,,,83.0,share of family misses 0.697,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Web_RF_CommandInjection,0.00748746688107714,,,7.0,share of family misses 0.059,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Web_RF_SqlInjection,0.02367273151125036,,,20.0,share of family misses 0.168,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Web_RF_Uploading_Attack,0.0,,,0.0,share of family misses 0.000,09_Statistical_Analysis/shift/floors_subtypes.csv
+F6,subtype_miss_Web_RF_XSS,0.00324019414928504,,,2.0,share of family misses 0.017,09_Statistical_Analysis/shift/floors_subtypes.csv
+design,mlp_share_cpu_original_main,0.3727249531203552,,,16200.0,,06_Experiments/raw/curves/*__main__random.csv
+reaudit,H2_share_le_1024,0.7916666666666666,0.4583333333333333,1.0,24.0,dataset-then-task cluster bootstrap,06_Experiments/audit/audit_summary.json
+reaudit,H6_category_both_beyond_data,35.0,,,144.0,counted correct: 35,06_Experiments/audit/A1_forecast_categories.csv
+reaudit,H6_category_measurable,104.0,,,144.0,counted correct: 96,06_Experiments/audit/A1_forecast_categories.csv
+reaudit,H6_category_observed_censored_forecast_finite,1.0,,,144.0,counted correct: 0,06_Experiments/audit/A1_forecast_categories.csv
+reaudit,H6_category_observed_finite_forecast_beyond,4.0,,,144.0,counted correct: 0,06_Experiments/audit/A1_forecast_categories.csv
+reaudit,H6_within2_measurable_only,0.9230769230769231,,,104.0,,06_Experiments/audit/audit_summary.json
+reaudit,km_median_nstar_HGB,147.70277369857996,75.27908644832239,407.7250263774869,24.0,reached 19; ci columns = KM quartiles,06_Experiments/audit/A3_km_nstar.csv
+reaudit,km_median_nstar_LogReg,156.36241912393092,60.45847252943086,inf,24.0,reached 16; ci columns = KM quartiles,06_Experiments/audit/A3_km_nstar.csv
+reaudit,km_median_nstar_MLP,159.16295406337557,62.04834724606607,712.0924172328746,24.0,reached 18; ci columns = KM quartiles,06_Experiments/audit/A3_km_nstar.csv
+reaudit,km_median_nstar_RF,85.11104160370245,44.38875383812332,659.7971452595826,24.0,reached 19; ci columns = KM quartiles,06_Experiments/audit/A3_km_nstar.csv
+reaudit,km_median_nstar_kNN1,219.82983328588784,70.32192395284993,887.4305815323131,24.0,reached 18; ci columns = KM quartiles,06_Experiments/audit/A3_km_nstar.csv
+reaudit,km_median_nstar_kNN5,437.4151006007895,92.32076440674471,1739.1126894059332,24.0,reached 18; ci columns = KM quartiles,06_Experiments/audit/A3_km_nstar.csv

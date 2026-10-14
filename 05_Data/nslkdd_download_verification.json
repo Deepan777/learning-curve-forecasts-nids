@@ -1,0 +1,15 @@
+{
+ "rows_new": 125973,
+ "rows_old": 125973,
+ "fields_new": 43,
+ "shared_columns": 38,
+ "missing_in_old": [
+  "logged_in",
+  "srv_count",
+  "rerror_rate",
+  "srv_diff_host_rate",
+  "dst_host_srv_count"
+ ],
+ "mismatching_cells_by_column": {},
+ "identical_on_shared_columns": true
+}

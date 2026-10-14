@@ -1,0 +1,5 @@
+dataset,signal,threshold,n,accepted,unsafe_accepted,unsafe_all
+cicids,pilot_width,0.3102509166456988,96,3,3,48
+ciciot,pilot_width,-inf,92,0,0,46
+nslkdd,pilot_width,-inf,43,0,0,33
+unsw,pilot_width,-inf,108,0,0,7

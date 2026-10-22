@@ -2,7 +2,7 @@
 
 Code, protocols, per-fit records and result files for the article
 
-> Joshitha N, P. Deepanramkumar and A. Helen Sharmila.
+> P. Deepanramkumar, A. Helen Sharmila and Joshitha N.
 > **Learning-curve forecasts underestimate the labelling needs of network intrusion detectors facing unseen attack variants**.
 > Manuscript submitted to *Scientific Reports* (2026).
 

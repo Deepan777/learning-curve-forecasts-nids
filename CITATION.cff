@@ -6,21 +6,21 @@ version: 1.0.0
 license: MIT
 repository-code: "https://github.com/Deepan777/learning-curve-forecasts-nids"
 authors:
-  - family-names: "N"
-    given-names: "Joshitha"
   - family-names: "Deepanramkumar"
     given-names: "P."
   - family-names: "Helen Sharmila"
     given-names: "A."
+  - family-names: "N"
+    given-names: "Joshitha"
 preferred-citation:
   type: article
   title: "Learning-curve forecasts underestimate the labelling needs of network intrusion detectors facing unseen attack variants"
   authors:
-    - family-names: "N"
-      given-names: "Joshitha"
     - family-names: "Deepanramkumar"
       given-names: "P."
     - family-names: "Helen Sharmila"
       given-names: "A."
+    - family-names: "N"
+      given-names: "Joshitha"
   journal: "Scientific Reports (submitted)"
   year: 2026
